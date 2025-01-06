@@ -1,7 +1,7 @@
-    <?php get header();
+    <?php get_header(); ?>
     <div>
         <section>
 
         </section>
     </div>
-    php get footer();>
+    <?php get_footer(); ?>
