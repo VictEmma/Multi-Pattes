@@ -1,5 +1,7 @@
-  <div>
-    <section>
+    <?php get header();
+    <div>
+        <section>
 
-    </section>
-  </div>
+        </section>
+    </div>
+    php get footer();>
