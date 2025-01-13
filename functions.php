@@ -1,10 +1,8 @@
 <?php
 function add_styles() {
-  // Enregistre et charge le style principal
   wp_enqueue_style('reset-style', get_template_directory_uri() . '/reset.css');
   wp_enqueue_style('main-style', get_template_directory_uri() . '/style.css');
-  
-  // Enregistre et charge le style spécifique au header
+  wp_enqueue_style('accueil-style', get_template_directory_uri() . '/accueil.css');
   wp_enqueue_style('header-style', get_template_directory_uri() . '/header.css');
 }
 
