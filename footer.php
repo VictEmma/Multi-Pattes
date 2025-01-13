@@ -1,6 +1,6 @@
 <footer>
   <link rel="stylesheet" href="reset.css">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="footer.css">
   <div class="footer-container">
     <!-- Section Logo -->
     <div class="footer-logo">
@@ -31,7 +31,7 @@
 
     <!-- Section Réseaux Sociaux -->
     <div class="footer-socials">
-      <a href="URL-FACEBOOK" target="_blank"><img src="http://wordpress.test/wp-content/uploads/2025/01/Facebook-Logo.png" alt="Facebook"></a>
+      <a href="./who_i_am.php" target="_blank"><img src="http://wordpress.test/wp-content/uploads/2025/01/Facebook-Logo.png" alt="Facebook"></a>
       <a href="URL-TIKTOK" target="_blank"><img src="http://wordpress.test/wp-content/uploads/2025/01/TikTok-Logo.png" alt="TikTok"></a>
       <a href="URL-INSTAGRAM" target="_blank"><img src="http://wordpress.test/wp-content/uploads/2025/01/Instagram-Logo.png" alt="Instagram"></a>
     </div>

@@ -4,6 +4,7 @@ function add_styles() {
   wp_enqueue_style('main-style', get_template_directory_uri() . '/style.css');
   wp_enqueue_style('accueil-style', get_template_directory_uri() . '/accueil.css');
   wp_enqueue_style('header-style', get_template_directory_uri() . '/header.css');
+  wp_enqueue_style('footer-style',get_template_directory_uri().'/footer.css');
 }
 
 // Une seule action pour enqueuer les styles
