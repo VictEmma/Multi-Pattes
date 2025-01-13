@@ -85,7 +85,7 @@ footer {
 
 .footer-contact .contact {
    font-weight: bold; /* Espacement entre le titre et les items */
-   margin-bottom: -0.3rem;
+   margin-bottom: -0.1rem;
 }
 
 .footer-contact .contact-item {
