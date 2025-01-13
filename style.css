@@ -8,3 +8,52 @@
  section h1 {
     color:yellow
  }
+.ticker-wrapper {
+   width: 100%;
+   overflow: hidden;
+   background-color: #FFED00;
+   border: 1px solid #ddd;
+   padding: 10px 0;
+ }
+ 
+ .ticker {
+   display: inline-block;
+   white-space: nowrap;
+   animation: scroll 30s linear infinite;
+   gap:100px
+ }
+ 
+ .ticker span {
+   display: inline-block;
+   font-family: 'Montserrat', bold;
+   font-size: 14px;
+   font-weight: bold;
+   color: #333;
+   margin-right: 15px;
+ }
+ 
+ .separator {
+   width: 180px; 
+   height: 18px; 
+   fill: yellow; 
+   stroke: yellow; /* Contour jaune */
+   stroke-width: 1px; /* Épaisseur du contour */
+   margin: 0 15px; /* Espacement autour du SVG */
+   vertical-align: middle; /* Aligne le SVG avec le texte */
+ }
+.video-background{
+   video{
+       width: 100%;
+       height: auto;
+   }
+}
+ /* Animation pour le ticker */
+ @keyframes scroll {
+   0% {
+     transform: translateX(0%);
+   }
+   100% {
+     transform: translateX(-50%);
+   }
+ }
+ 

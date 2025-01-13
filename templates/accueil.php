@@ -1,3 +1,9 @@
+<?php
+/**
+    * Template Name: Accueil
+*/
+?>
+
 <?php get_header(); ?>
     <div class="ticker-wrapper">
   <div class="ticker">

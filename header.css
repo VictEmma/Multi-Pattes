@@ -1,0 +1,21 @@
+header ul {
+    background-color: #FFFBE7;
+    padding: 25px; /* Ajusté pour éviter une hauteur excessive */
+    margin: 0; /* Supprime les marges par défaut */
+    display: flex; /* Utiliser flexbox pour l'alignement horizontal */
+    align-items: center; /* Alignement vertical des éléments */
+    justify-content: space-around; /* Espacement uniforme entre les éléments */
+    gap: 13px; /* Espacement entre les éléments */
+    list-style: none; /* Retire les puces de liste */
+}
+header ul img {
+    width: 100%;
+    height: 41px;
+}
+header ul li a {
+    text-decoration: none; /* Retire le soulignement des liens */
+    color: black; /* Couleur du texte des liens */
+    font-size: 18px; /* Taille de police */
+    font-family: 'Montserrat', sans-serif; /* Police Montserrat */
+    font-weight: bold; /* Texte en gras */
+}
