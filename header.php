@@ -16,7 +16,7 @@
     <ul>
       <li><a href="">Qui suis-je ?</a></li>
       <li><a href="">Mes services</a></li>
-      <a href=""><img src="http://projet-multipattes.test/wp-content/uploads/2025/01/Logo-Text.svg" alt="Mon logo"></a>
+      <a href=""><img src="http://wordpress.test/wp-content/uploads/2025/01/Logo-Text.svg" alt="Mon logo"></a>
       <li><a href="">Comment réserver ?</a></li>
       <li><a href="">Contact</a></li>
     </ul>

@@ -6,7 +6,9 @@
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>Qui suis-je ?</title>
+   <link rel="stylesheet" href="reset.css">
    <link rel="stylesheet" href="style.css">
+   <link rel="stylesheet" href="who_style.css">
 </head>
 <body>
    <header>
@@ -31,12 +33,12 @@
                </p>
             </div>
             <div class="image">
-               <img src="carte.png" alt="Carte où me retrouver">
+               <img src="http://wordpress.test/wp-content/uploads/2025/01/PaperPreview-Dark-RegularText-RegularColors.png" alt="Carte où me retrouver" width="414" height="426">
             </div>
          </div>
          <div class="additional">
             <h2>Où me retrouver ?</h2>
-            <img src="carte.png" alt="Carte avec localisation">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d22343.25489566852!2d5.567836471909561!3d45.572311540243284!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6354a6efc59d41fd%3A0x39d6bc66817d82ca!2sMultipattes!5e0!3m2!1sen!2sfr!4v1736845489528!5m2!1sen!2sfr" width="414" height="420" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
          </div>
          <div class="side-text">
             <p>
