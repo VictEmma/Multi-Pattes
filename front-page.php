@@ -26,3 +26,4 @@
         Votre navigateur ne supporte pas la lecture de cette vidéo.
     </video>
 </div>
+<?php get_footer(); ?>
