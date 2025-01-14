@@ -11,7 +11,7 @@
   <title>Mon site internet</title>
   <?php wp_head(); ?>
 </head>
-<body>
+<body <?php body_class(); ?>>
   <header>
     <ul>
       <li><a href="">Qui suis-je ?</a></li>

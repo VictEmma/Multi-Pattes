@@ -1,9 +1,8 @@
-body {
+body.page-template-who_i_am {
    font-family: 'Montserrat', sans-serif;
    line-height: 1.6;
    color: #000000;
    background-color: #ffffff;
-}
 
 h1 {
    font-size: 48px;
@@ -112,4 +111,5 @@ strong {
    .additional iframe {
       max-width: 100%; /* L'iframe occupe toute la largeur */
    }
+}
 }
