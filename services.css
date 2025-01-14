@@ -1,0 +1,73 @@
+body.page-template-services {
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.6;
+    color: #000000;
+    background-color: #fff;
+    margin: 0;
+    padding: 0;
+    
+    h1 {
+        font-size: 48px;
+        text-align: center;
+        color: #000000;
+        margin: 120px auto 40px;
+        font-weight: 700;
+    }
+    
+    .about {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
+        padding: 40px;
+        max-width: 1200px; /* Limite la largeur totale */
+        gap: 40px; /* Espace entre les colonnes */
+        flex-wrap: wrap; /* Permet le passage en colonne sur petit écran */
+    }
+    
+    .first {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        max-width: 50%; /* 50% de l'espace total pour le texte */
+        gap: 20px;
+    }
+    
+    .first .icon {
+        width: 40px;
+        height: 40px;
+    }
+    
+    .first h2 {
+        font-size: 24px;
+        font-weight: bold;
+        margin: 0;
+    }
+    
+    .first h3 {
+        font-size: 18px;
+        margin: 0;
+    }
+    
+    .first .button {
+        background-color: #FFD700; /* Jaune bouton */
+        color: #000000;
+        padding: 10px 20px;
+        display: inline-block;
+        text-align: center;
+        border-radius: 8px;
+        font-weight: bold;
+        margin-top: 20px;
+        cursor: pointer;
+    }
+    
+    .first .button:hover {
+        background-color: #ac347a; /* Variation au survol */
+    }
+    
+    .img {
+        max-width: 50%; /* L'image occupe 50% */
+        border-radius: 8px;
+        object-fit: cover; /* Maintient les proportions */
+    }
+}

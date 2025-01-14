@@ -1,6 +1,4 @@
 <footer>
-  <link rel="stylesheet" href="reset.css">
-  <link rel="stylesheet" href="footer.css">
   <div class="footer-container">
     <!-- Section Logo -->
     <div class="footer-logo">
@@ -50,3 +48,5 @@
     <img src="http://projet-multipattes.test/wp-content/uploads/2025/01/Patounne.svg" alt="Patte">
   </div>
 </footer>
+</body>
+</html>

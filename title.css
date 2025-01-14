@@ -1,0 +1,47 @@
+.custom-title {
+    font-family: "Montserrat", sans-serif; /* Police du titre */
+    position: relative;
+    display: flex; /* Flexbox pour gérer l'alignement horizontal */
+    align-items: center; /* Aligner verticalement les éléments */
+    gap: 20px; /* Espace entre les éléments */
+    padding: 20px; /* Espace interne */
+    width: fit-content; /* Ajuster à la taille du contenu */
+    margin: 0 auto; /* Centrer le titre horizontalement */
+}
+
+.custom-title::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%; /* Le rectangle s'étend à tout le conteneur */
+    height: 100%; /* Le rectangle couvre la hauteur */
+    background-color: #FFED00; /* Jaune pour le fond */
+    z-index: -1; /* Envoyer derrière le texte et les pattes */
+    clip-path: polygon(10% 0%, 100% 0%, 90% 100%, 0% 100%); /* Rectangle avec bords en biais */
+}
+
+.custom-title h2 {
+    font-size: 24px; /* Taille du texte */
+    font-weight: bold;
+    color: #000; /* Couleur du texte */
+    margin: 0;
+    text-align: center;
+    z-index: 1; /* Par-dessus le rectangle */
+}
+
+.patte {
+    width: 40px; /* Taille des pattes */
+    height: auto;
+    z-index: 1; /* Par-dessus le rectangle */
+}
+
+.left-patte {
+    order: 0; /* Assure que la patte gauche reste à gauche */
+    margin-left: 0;
+}
+
+.right-patte {
+    order: 2; /* Assure que la patte droite reste à droite */
+    margin-right: 0;
+}
