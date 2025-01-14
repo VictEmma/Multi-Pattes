@@ -2,9 +2,42 @@
  * Thème Name: Thème Multipattes Site
  * Version : 1.0.0
  */
- section {
-    color:brown
+ h1{
+   font-size:85px;
  }
- section h1 {
-    color:yellow
+ h2{
+   font-size:48px;
+   font-weight: 600;
  }
+ text{
+  line-height: 150%;
+ }
+ p{
+   font-size:16px;
+ }
+ .custom-button {
+   display: inline-flex;
+   align-items: center;
+   justify-content: center;
+   padding: 10px 15px;
+   background-color: #f4c542;
+   border: none;
+   border-radius: 5px;
+   cursor: pointer;
+   font-family: 'Montserrat', sans-serif;
+   font-size: 16px;
+   font-weight: bold;
+   color: #fff;
+   transition: background-color 0.3s ease;
+}
+
+.custom-button svg {
+   width: 18px;
+   height: 18px;
+   fill: #fff;
+   margin-right: 8px;
+}
+
+.custom-button .button-text {
+   display: inline-block;
+}
