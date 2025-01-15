@@ -7,21 +7,21 @@
 <?php get_header(); ?>
     <div class="ticker-wrapper">
   <div class="ticker">
-  <img src="http://projet-multipattes.test/wp-content/uploads/2025/01/Patounne.svg" alt="Motif patte" class="separator">
+  <img src="<?php echo get_template_directory_uri(); ?>/img/Patounne.svg" alt="Motif patte" class="separator">
     <span>Au cœur de la région Auvergne-Rhône Alpes, à Chimilin</span>
-    <img src="http://projet-multipattes.test/wp-content/uploads/2025/01/Patounne.svg" alt="Motif patte" class="separator">
+    <img src="<?php echo get_template_directory_uri(); ?>/img/Patounne.svg" alt="Motif patte" class="separator">
     <span>Votre service de garde de chiens handicapés et âgés</span>
-    <img src="http://projet-multipattes.test/wp-content/uploads/2025/01/Patounne.svg" alt="Motif patte" class="separator">
+    <img src="<?php echo get_template_directory_uri(); ?>/img/Patounne.svg" alt="Motif patte" class="separator">
     <span>Au cœur de la région Auvergne-Rhône Alpes, à Chimilin</span>
-    <img src="http://projet-multipattes.test/wp-content/uploads/2025/01/Patounne.svg" alt="Motif patte" class="separator">
+    <img src="<?php echo get_template_directory_uri(); ?>/img/Patounne.svg" alt="Motif patte" class="separator">
     <span>Votre service de garde de chiens handicapés et âgés</span>
-    <img src="http://projet-multipattes.test/wp-content/uploads/2025/01/Patounne.svg" alt="Motif patte" class="separator">
+    <img src="<?php echo get_template_directory_uri(); ?>/img/Patounne.svg" alt="Motif patte" class="separator">
     <span>Au cœur de la région Auvergne-Rhône Alpes, à Chimilin</span>
-    <img src="http://projet-multipattes.test/wp-content/uploads/2025/01/Patounne.svg" alt="Motif patte" class="separator">
+    <img src="<?php echo get_template_directory_uri(); ?>/img/Patounne.svg" alt="Motif patte" class="separator">
     <span>Votre service de garde de chiens handicapés et âgés</span>
-    <img src="http://projet-multipattes.test/wp-content/uploads/2025/01/Patounne.svg" alt="Motif patte" class="separator">
+    <img src="<?php echo get_template_directory_uri(); ?>/img/Patounne.svg" alt="Motif patte" class="separator">
     <span>Au cœur de la région Auvergne-Rhône Alpes, à Chimilin</span>
-    <img src="http://projet-multipattes.test/wp-content/uploads/2025/01/Patounne.svg" alt="Motif patte" class="separator">
+    <img src="<?php echo get_template_directory_uri(); ?>/img/Patounne.svg" alt="Motif patte" class="separator">
     <span>Votre service de garde de chiens handicapés et âgés</span>
   </div>
 

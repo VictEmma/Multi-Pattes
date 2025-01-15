@@ -22,7 +22,7 @@
                      J'ai donc décidé par la suite de créer mon entreprise car il n'y a pas assez de prises en charge en clinique pour les chiens à pathologies similaires.
                      Pour ce faire, j'ai obtenu divers diplômes et fait plusieurs formations, pour être la plus qualifiée possible pour répondre aux besoins de ces animaux.
                   </p>
-                  <img src="http://wordpress.test/wp-content/uploads/2025/01/PaperPreview-Dark-RegularText-RegularColors.png" alt="Carte où me retrouver" width="414" height="426">
+                  <img src="<?php echo get_template_directory_uri(); ?>/img/sample.png" alt="Carte où me retrouver" width="414" height="426">
                </div>
             <div class="title">
                <h2 class="where-txt">Où me retrouver ?</h2>
