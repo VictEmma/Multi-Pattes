@@ -10,7 +10,7 @@ body.page-template-services {
         font-size: 48px;
         text-align: center;
         color: #000000;
-        margin: 120px auto 40px;
+        margin: 120px auto 120px;
         font-weight: 700;
     }
     
@@ -18,51 +18,53 @@ body.page-template-services {
         display: flex;
         justify-content: center;
         align-items: center;
-        margin: 0 auto;
-        padding: 40px;
-        max-width: 1200px; /* Limite la largeur totale */
-        gap: 40px; /* Espace entre les colonnes */
-        flex-wrap: wrap; /* Permet le passage en colonne sur petit écran */
+        background: #FFFBE7;
+        gap: 216px; /* Espace entre les colonnes */
+        flex-wrap: wrap;
+        padding-top: 100px;
+        padding-bottom: 100px; /* Passage en colonne sur petit écran */
     }
     
     .first {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        max-width: 50%; /* 50% de l'espace total pour le texte */
-        gap: 20px;
-    }
-    
-    .first .icon {
-        width: 40px;
-        height: 40px;
-    }
-    
-    .first h2 {
-        font-size: 24px;
-        font-weight: bold;
-        margin: 0;
-    }
-    
-    .first h3 {
-        font-size: 18px;
-        margin: 0;
-    }
+    display: flex;
+    flex-direction: column; /* Par défaut, colonne */
+    justify-content: center;
+    max-width: 50%; /* 50% pour le texte */
+    gap: 20px;
+}
+
+.first .icon-and-text {
+    display: flex;
+    align-items: center; /* Aligne verticalement */
+    gap: 17.44px; /* Espace entre l'icône et le texte */
+}
+
+.first h2 {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 0;
+}
+
+.first h3 {
+    font-size: 16px;
+    margin: 0;
+}
     
     .first .button {
-        background-color: #FFD700; /* Jaune bouton */
+        background-color: #FFED00; /* Jaune bouton */
         color: #000000;
         padding: 10px 20px;
         display: inline-block;
         text-align: center;
-        border-radius: 8px;
+        border-radius: 14px;
         font-weight: bold;
         margin-top: 20px;
         cursor: pointer;
+        max-width: 30%;
     }
     
     .first .button:hover {
-        background-color: #ac347a; /* Variation au survol */
+        background-color: #ffee00b3; /* Variation au survol */
     }
     
     .img {
