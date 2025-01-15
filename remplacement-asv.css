@@ -1,0 +1,46 @@
+body.page-template-remplacement-asv {
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.6;
+    color: #000000;
+    background-color: #ffffff;
+h1 {
+        font-size: 48px;
+        text-align: center;
+        color: #000000;
+        margin: 120px auto;
+        padding: 0;
+        font-weight: 700;
+}
+h2{
+    text-align: center;
+    font-size: 40px;
+}
+p{
+    text-align: left;
+}
+strong {
+    font-weight: 700;
+ }
+.remplacement-asv{
+    background-color: #FFFBE7;
+    padding: 62px 188px 130px 188px;
+
+}
+.remplacement-asv .presta {
+    margin-top: 62px;
+    display: flex;
+    gap: 67px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+    .presta-text .button {
+        margin-top: 12px;
+        display: flex;
+    }
+}
+.remplacement-asv .presta img {
+        width: 648px;
+        height: 432px;
+        border-radius: 20px;
+}
+}

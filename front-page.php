@@ -1,27 +1,21 @@
-<?php
-/**
-    * Template Name: Accueil
-*/
-?>
-
 <?php get_header(); ?>
     <div class="ticker-wrapper">
   <div class="ticker">
-  <img src="<?php echo get_template_directory_uri(); ?>/img/Patounnes.svg" alt="Motif patte" class="separator">
+  <img src="<?php echo get_template_directory_uri(); ?>/img/Patounne.svg" alt="Motif patte" class="separator">
     <span>Au cœur de la région Auvergne-Rhône Alpes, à Chimilin</span>
-    <img src="<?php echo get_template_directory_uri(); ?>/img/Patounnes.svg" alt="Motif patte" class="separator">
+    <img src="<?php echo get_template_directory_uri(); ?>/img/Patounne.svg" alt="Motif patte" class="separator">
     <span>Votre service de garde de chiens handicapés et âgés</span>
-    <img src="<?php echo get_template_directory_uri(); ?>/img/Patounnes.svg" alt="Motif patte" class="separator">
+    <img src="<?php echo get_template_directory_uri(); ?>/img/Patounne.svg" alt="Motif patte" class="separator">
     <span>Au cœur de la région Auvergne-Rhône Alpes, à Chimilin</span>
-    <img src="<?php echo get_template_directory_uri(); ?>/img/Patounnes.svg" alt="Motif patte" class="separator">
+    <img src="<?php echo get_template_directory_uri(); ?>/img/Patounne.svg" alt="Motif patte" class="separator">
     <span>Votre service de garde de chiens handicapés et âgés</span>
-    <img src="<?php echo get_template_directory_uri(); ?>/img/Patounnes.svg" alt="Motif patte" class="separator">
+    <img src="<?php echo get_template_directory_uri(); ?>/img/Patounne.svg" alt="Motif patte" class="separator">
     <span>Au cœur de la région Auvergne-Rhône Alpes, à Chimilin</span>
-    <img src="<?php echo get_template_directory_uri(); ?>/img/Patounnes.svg" alt="Motif patte" class="separator">
+    <img src="<?php echo get_template_directory_uri(); ?>/img/Patounne.svg" alt="Motif patte" class="separator">
     <span>Votre service de garde de chiens handicapés et âgés</span>
-    <img src="<?php echo get_template_directory_uri(); ?>/img/Patounnes.svg" alt="Motif patte" class="separator">
+    <img src="<?php echo get_template_directory_uri(); ?>/img/Patounne.svg" alt="Motif patte" class="separator">
     <span>Au cœur de la région Auvergne-Rhône Alpes, à Chimilin</span>
-    <img src="<?php echo get_template_directory_uri(); ?>/img/Patounnes.svg" alt="Motif patte" class="separator">
+    <img src="<?php echo get_template_directory_uri(); ?>/img/Patounne.svg" alt="Motif patte" class="separator">
     <span>Votre service de garde de chiens handicapés et âgés</span>
   </div>
 
@@ -57,19 +51,45 @@
         </p>
       </div>
     </div>
+<div class="youtube-video">
     <?php
-$youtube_id = "PGrNO5zYXyg"; // Remplacez par votre ID de vidéo YouTube
+// Récupérer le lien YouTube depuis un champ ACF
+$youtube_link = get_field('ytb_link'); // Assurez-vous que 'ytb_link' correspond au nom exact de votre champ ACF
+
+// Vérifier si le lien existe et extraire l'ID de la vidéo
+if ($youtube_link) {
+    // Nettoyer l'URL pour plus de sécurité
+    $youtube_link = esc_url($youtube_link);
+
+    // Fonction pour extraire l'ID de la vidéo depuis l'URL
+    function getYouTubeId($url) {
+        parse_str(parse_url($url, PHP_URL_QUERY), $query);
+        return $query['v'] ?? null;
+    }
+
+    // Extraire l'ID de la vidéo
+    $youtube_id = getYouTubeId($youtube_link);
+
+    if ($youtube_id): ?>
+        
+            <iframe 
+                width="560" 
+                height="315" 
+                src="https://www.youtube.com/embed/<?php echo htmlspecialchars($youtube_id); ?>" 
+                title="YouTube video player" 
+                frameborder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                allowfullscreen>
+            </iframe>
+    <?php else: ?>
+        <p>Vidéo non valide. Veuillez vérifier le lien YouTube dans le champ ACF.</p>
+    <?php endif;
+} else {
+    echo '<p>Aucun lien YouTube trouvé dans le champ ACF.</p>';
+}
 ?>
-  <div class="youtube-video">
-    <iframe 
-        width="560" 
-        height="315" 
-        src="https://www.youtube.com/embed/<?php echo $youtube_id; ?>" 
-        title="YouTube video player" 
-        frameborder="0" 
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-        allowfullscreen>
-    </iframe>
+        </div>
+
   </div>
   </div>
   <div class="who-is">

@@ -7,6 +7,7 @@ function add_styles() {
   wp_enqueue_style('footer-style',get_template_directory_uri().'/footer.css');
   wp_enqueue_style('qui-suis-je-style', get_template_directory_uri() . '/who_style.css');
   wp_enqueue_style('services', get_template_directory_uri() . '/services.css');
+  wp_enqueue_style('remplacement-asv', get_template_directory_uri() . '/remplacement-asv.css');
 }
 
 // Une seule action pour enqueuer les styles

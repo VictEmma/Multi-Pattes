@@ -1,5 +1,4 @@
 .ticker-wrapper {
-    width: 100%;
     overflow: hidden;
     background-color: #FFED00;
     border: 1px solid #ddd;
@@ -75,8 +74,6 @@
   }
 }
 
-.start .bienvenue .t-photo .text {
-}
 .start .who-is .title{
   display:flex;
   justify-content: center;
@@ -102,7 +99,7 @@
   justify-content: center;
   margin-top:84px;
 }
-.youtube-video {
+.start .youtube-video {
   display: flex;
   justify-content: center; /* Centre horizontalement */
   align-items: center; /* Centre verticalement si nécessaire */
@@ -111,7 +108,7 @@
   margin:50px 0px;
 }
 
-.youtube-video iframe {
+.start .youtube-video iframe {
   max-width: 100%; /* S'adapte aux écrans plus petits */
   height: auto;
   border-radius: 20px;
@@ -131,13 +128,14 @@
 }
 .services .grid-container {
   display: grid;
-  width: 1063px;
-  height: 647px;
+  width: 100%;
   padding:54px 180px;
   grid-template-columns: repeat(5, 1fr); /* 5 colonnes */
   grid-template-rows: repeat(3, 1fr); /* 3 lignes */
   grid-column-gap: 10px; /* Espacement horizontal */
   grid-row-gap: 10px; /* Espacement vertical */
+  box-sizing: border-box;
+  aspect-ratio: 5 / 3;
 }
 
 .services .grid-container .item {
