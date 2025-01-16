@@ -5,7 +5,6 @@ body.page-template-comment-reserver {
     background-color: #fff;
     margin: 0;
     padding: 0;
-
     h1 {
         font-size: 85px;
         text-align: center;
@@ -13,11 +12,9 @@ body.page-template-comment-reserver {
         margin: 120px auto 120px;
         font-weight: 700;
     }
-
     strong {
         font-weight: 700;
     }
-
     span {
         font-weight: 700;
     }
@@ -25,31 +22,27 @@ body.page-template-comment-reserver {
     .contact-section {
         background: #FFFBE7;
         display: flex;
-        justify-content: center;
+        justify-content: space-between;
         align-items: flex-end;
         padding: 50px 100px;
         gap: 20px;
         flex-direction: column;
     }
-
     .content-wrapper {
         display: flex;
         flex-wrap: wrap; /* Permet d'adapter les éléments */
         justify-content: space-between;
         gap: 138px;
         width: 100%;
-        padding-right: 47px;
     }
     
     .contact-info {
         flex: 1;
+        max-width: 30%;
         font-size: 16px;
-        margin: 123px -12px 123px 0px;
     }
     
     .contact-info p {
-        margin-left: -1035px;
-        position: absolute;
         margin-bottom: 20px;
         font-size: 16px;
         justify-content: flex-start;
@@ -60,7 +53,7 @@ body.page-template-comment-reserver {
         align-items: center;
         gap: 10px;
         margin-bottom: 20px;
-        margin-left: -65px;
+        font-size: 16px;
     }
     
     .phone-info .icon {
@@ -79,8 +72,6 @@ body.page-template-comment-reserver {
         text-align: center;
         transition: background-color 0.3s ease;
         font-size: 16px;
-        position: relative;
-        left: -50px;
     }
     
     .button:hover {
@@ -89,6 +80,7 @@ body.page-template-comment-reserver {
     
     .info-section {
         flex: 2;
+        max-width: 40%;
         font-size: 16px;
     }
     
@@ -107,17 +99,11 @@ body.page-template-comment-reserver {
         font-size: 28px;
     }
     
-    .info-section {
-        display: flex;
-        flex-direction: column;
-        align-items: center; /* Centre horizontalement le contenu */
+    .image-section {
+        flex: 1;
+        max-width: 409px;
+        height: 488px;
     }
-    
-    .info-section .button {
-        margin-top: 123px; /* Ajoute un espace de 123px par rapport au contenu au-dessus */
-        margin-bottom: 123px; /* Ajoute un espace de 123px avant le footer */
-        align-self: center; /* Centre le bouton horizontalement */
-    }  
     
     .dog-image {
         max-width: 409px;
