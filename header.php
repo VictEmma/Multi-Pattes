@@ -16,11 +16,7 @@
     <ul>
       <li><a href="">Qui suis-je ?</a></li>
       <li><a href="">Mes services</a></li>
-<<<<<<< HEAD
-      <a href=""><img src="<?php echo get_template_directory_uri(); ?>/img/Logo_Text.svg" alt="Mon logo"/></a>
-=======
       <a href=""><img src="<?php echo get_template_directory_uri(); ?>/img/Logo_Text.svg" alt="Mon logo"></a>
->>>>>>> 588e3b2b9a267978fcb0b1945c0750171253f6cc
       <li><a href="">Comment réserver ?</a></li>
       <li><a href="">Contact</a></li>
     </ul>
