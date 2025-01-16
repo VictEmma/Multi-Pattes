@@ -1,9 +1,10 @@
-<?php /* Template Name: Comment réserver ? */ ?>
+<?php /* Template Name: Contactez-moi */ ?>
 <?php get_header(); ?>
 
-<h1>Comment réserver ?</h1>
+<h1>Me contacter</h1>
 
 <section class="contact-section">
+    <!-- Contact Info Section -->
     <div class="contact-info">
         <p>Pour profiter de mes services, n'hésitez pas à me contacter par mail ou par<br>téléphone !</p>
         <div class="phone-info">
@@ -12,25 +13,54 @@
         </div>
         <a href="tel:+33687200332" class="button">Me contacter !</a>
     </div>
-    
+
     <div class="content-wrapper">
+        <!-- Où me trouver Section -->
         <div class="info-section">
             <div class="info-box">
-                <h2>À savoir</h2>
-                <p>Vous souhaitez pouvoir vous occuper d'un chien catégorisé ?<br>
-                    C'est possible à l'aide de la <strong>formation CESCCAM</strong>, que je peux<br>vous faire passer. 
-                    Contactez-moi pour plus d'informations, ou<br>pour choisir une date de passage !
-                </p>
-                <p><br><br><br>Pour faire garder votre toutou, il faut obligatoirement <strong>me<br>contacter</strong> afin d'obtenir un 
-                    <strong>devis personnalisé</strong> en fonction du<br>profil de l'animal.
-                </p>
-                <p>Pour réserver le <strong>parc</strong>, veuillez <strong>me contacter par mail</strong> ou par <br><strong>appel téléphonique</strong> pour convenir d'une date.</p>
+                <h2>Où me trouver ?</h2>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d22343.25489566852!2d5.567836471909561!3d45.572311540243284!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6354a6efc59d41fd%3A0x39d6bc66817d82ca!2sMultipattes!5e0!3m2!1sfr!2sfr!4v1737016599200!5m2!1sfr!2sfr" width="500" height="410" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
-            <a href="mailto:example@email.com" class="button">Me contacter !</a>
         </div>
 
-    <div class="image-section">
-        <img src="<?php echo get_template_directory_uri(); ?>/img/sample.png" alt="Chien" class="dog-image">
+        <!-- Form Section -->
+        <div class="info-section">
+            <div class="info-box">
+                <h2>Me contacter</h2>
+                <form>
+                    <div class="form-group">
+                        <input type="text" placeholder="Nom" required>
+                        <input type="text" placeholder="Prénom" required>
+                    </div>
+                    <input type="email" placeholder="Email" required>
+                    <textarea placeholder="Message" rows="4" required></textarea>
+                    <button type="submit" class="button">Envoyer</button>
+                </form>
+            </div>
+        </div>
+
+        <!-- Social Media Section -->
+        <div class="info-section">
+            <div class="info-box">
+                <h2>Sur les réseaux</h2>
+                <div class="social-icons">
+                    <a href="#"><img src="<?php echo get_template_directory_uri(); ?>/img/facebook-icon.png" alt="Facebook"></a>
+                    <a href="#"><img src="<?php echo get_template_directory_uri(); ?>/img/instagram-icon.png" alt="Instagram"></a>
+                    <a href="#"><img src="<?php echo get_template_directory_uri(); ?>/img/tiktok-icon.png" alt="TikTok"></a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Documents Section -->
+        <div class="info-section">
+            <div class="info-box">
+                <h2>Documents</h2>
+                <div class="document-links">
+                    <a href="#" class="pdf-link">Contrat de Garde</a>
+                    <a href="#" class="pdf-link">Règlement Intérieur du Parc de Jeu</a>
+                </div>
+            </div>
+        </div>
     </div>
 </section>
 

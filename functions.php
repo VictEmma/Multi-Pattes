@@ -9,6 +9,7 @@ function add_styles() {
   wp_enqueue_style('services', get_template_directory_uri() . '/services.css');
   wp_enqueue_style('truffinoscope', get_template_directory_uri() . '/truffinoscope.css');
   wp_enqueue_style('reservation', get_template_directory_uri() . '/comment-reserver.css');
+  wp_enqueue_style('contact', get_template_directory_uri() . '/contact-me.css');
 }
 
 // Une seule action pour enqueuer les styles
