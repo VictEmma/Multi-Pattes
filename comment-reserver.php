@@ -1,8 +1,6 @@
 <?php /* Template Name: Comment réserver ? */ ?>
 <?php get_header(); ?>
-
 <h1>Comment réserver ?</h1>
-
 <section class="contact-section">
     <div class="contact-info">
         <p>Pour profiter de mes services, n'hésitez pas à me contacter par mail ou par<br>téléphone !</p>
@@ -28,10 +26,8 @@
             </div>
             <a href="mailto:example@email.com" class="button">Me contacter !</a>
         </div>
-
     <div class="image-section">
         <img src="<?php echo get_template_directory_uri(); ?>/img/sample.png" alt="Chien" class="dog-image">
     </div>
 </section>
-
 <?php get_footer(); ?>
