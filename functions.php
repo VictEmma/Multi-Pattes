@@ -10,6 +10,8 @@ function add_styles() {
   wp_enqueue_style('truffinoscope', get_template_directory_uri() . '/truffinoscope.css');
   wp_enqueue_style('reservation', get_template_directory_uri() . '/comment-reserver.css');
   wp_enqueue_style('contact', get_template_directory_uri() . '/contact-me.css');
+  wp_enqueue_style('contact-try', get_template_directory_uri() . '/contact-me-try.css');
+  wp_enqueue_style('mentions-legales', get_template_directory_uri() . '/mentions-legales.css');
 }
 
 // Une seule action pour enqueuer les styles

@@ -1,0 +1,42 @@
+body.page-template-mentions-legales {
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.6;
+    color: #000000;
+    background-color: #ffffff;
+ 
+ h1 {
+    font-size: 85px;
+    text-align: center;
+    color: #000000;
+    margin: 120px auto;
+    padding: 0;
+    font-weight: 700;
+ }
+
+ .about {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    padding: 130px 190px;
+    background: #FFFBE7; /* Fond clair */
+    margin-top: 40px; /* Marge au-dessus de la section */
+ }
+
+ .title {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+ }
+
+ .title h2 {
+    font-size: 24px;
+    text-align: left;
+ }
+
+ .title p {
+    font-size: 16px;
+    line-height: 1.8;
+    color: #000000;
+    text-align: left;
+ }
+}
