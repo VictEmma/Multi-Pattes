@@ -1,22 +1,26 @@
 <?php get_header(); ?>
     <div class="ticker-wrapper">
   <div class="ticker">
-  <img src="<?php echo get_template_directory_uri(); ?>/img/Patounne.svg" alt="Motif patte" class="separator">
-    <span>Au cœur de la région Auvergne-Rhône Alpes, à Chimilin</span>
-    <img src="<?php echo get_template_directory_uri(); ?>/img/Patounne.svg" alt="Motif patte" class="separator">
-    <span>Votre service de garde de chiens handicapés et âgés</span>
-    <img src="<?php echo get_template_directory_uri(); ?>/img/Patounne.svg" alt="Motif patte" class="separator">
-    <span>Au cœur de la région Auvergne-Rhône Alpes, à Chimilin</span>
-    <img src="<?php echo get_template_directory_uri(); ?>/img/Patounne.svg" alt="Motif patte" class="separator">
-    <span>Votre service de garde de chiens handicapés et âgés</span>
-    <img src="<?php echo get_template_directory_uri(); ?>/img/Patounne.svg" alt="Motif patte" class="separator">
-    <span>Au cœur de la région Auvergne-Rhône Alpes, à Chimilin</span>
-    <img src="<?php echo get_template_directory_uri(); ?>/img/Patounne.svg" alt="Motif patte" class="separator">
-    <span>Votre service de garde de chiens handicapés et âgés</span>
-    <img src="<?php echo get_template_directory_uri(); ?>/img/Patounne.svg" alt="Motif patte" class="separator">
-    <span>Au cœur de la région Auvergne-Rhône Alpes, à Chimilin</span>
-    <img src="<?php echo get_template_directory_uri(); ?>/img/Patounne.svg" alt="Motif patte" class="separator">
-    <span>Votre service de garde de chiens handicapés et âgés</span>
+    <img src="<?php echo get_template_directory_uri(); ?>/img/Patounne.svg" alt="Motif patte" class="separator" />
+    <span><?php echo get_field('texte_defilant_1'); ?></span>
+    <img src="<?php echo get_template_directory_uri(); ?>/img/Patounne.svg" alt="Motif patte" class="separator" />
+    <span><?php echo get_field('texte_defilant_2'); ?></span>
+    <img src="<?php echo get_template_directory_uri(); ?>/img/Patounne.svg" alt="Motif patte" class="separator" />
+    <span><?php echo get_field('texte_defilant_3'); ?></span>
+    <img src="<?php echo get_template_directory_uri(); ?>/img/Patounne.svg" alt="Motif patte" class="separator" />
+    <span><?php echo get_field('texte_defilant_4'); ?></span>
+    <img src="<?php echo get_template_directory_uri(); ?>/img/Patounne.svg" alt="Motif patte" class="separator" />
+    <span><?php echo get_field('texte_defilant_5'); ?></span>
+    <img src="<?php echo get_template_directory_uri(); ?>/img/Patounne.svg" alt="Motif patte" class="separator" />
+    <span><?php echo get_field('texte_defilant_1'); ?></span>
+    <img src="<?php echo get_template_directory_uri(); ?>/img/Patounne.svg" alt="Motif patte" class="separator" />
+    <span><?php echo get_field('texte_defilant_2'); ?></span>
+    <img src="<?php echo get_template_directory_uri(); ?>/img/Patounne.svg" alt="Motif patte" class="separator" />
+    <span><?php echo get_field('texte_defilant_3'); ?></span>
+    <img src="<?php echo get_template_directory_uri(); ?>/img/Patounne.svg" alt="Motif patte" class="separator" />
+    <span><?php echo get_field('texte_defilant_4'); ?></span>
+    <img src="<?php echo get_template_directory_uri(); ?>/img/Patounne.svg" alt="Motif patte" class="separator" />
+    <span><?php echo get_field('texte_defilant_5'); ?></span>
   </div>
 
 </div>
@@ -25,8 +29,7 @@
         <source src="<?php echo esc_url(get_field('background_content')); ?>" type="video/mp4">
         Votre navigateur ne supporte pas la lecture de cette vidéo.
     </video>
-        <h1>Le bien-être canin,
-        mon engagement. </h1>
+        <h1><?php echo get_field('text_video'); ?></h1>
 </div>
 <section class="start">
   <div class="bienvenue">
@@ -88,29 +91,41 @@ if ($youtube_link) {
     echo '<p>Aucun lien YouTube trouvé dans le champ ACF.</p>';
 }
 ?>
+
         </div>
 
   </div>
   </div>
+
   <div class="who-is">
-    <img src="http://projet-multipattes.test/wp-content/uploads/2025/01/20240127_190206-scaled.jpg" alt="Photo de Fabienne Guinet">
+
+  <?php 
+// Récupérer le champ ACF 'img_pres'
+$img_pres = get_field('img_pres');
+
+// Vérifier si le tableau contient une clé 'url'
+if (!empty($img_pres['url'])) {
+    // Afficher l'image avec l'URL récupérée
+    echo '<img src="' . esc_url($img_pres['url']) . '" alt="Image de présentation">';
+} else {
+    // Message en cas d'absence d'URL
+    echo 'Aucune image de présentation disponible.';
+}
+?>
+
     <div class="who-text">
+    
       <div class="title">
-      <h2>
-        Qui suis-je ?
-      </h2>
+        <h2>
+          Qui suis-je ?
+        </h2>
       </div>
       <p>
-      Vous possédez un chien âgé ou handicapé, et vous ne <br> 
-      trouvez personne pour s’en occuper lors de vos <br> 
-      absences ? Vous cherchez un parc adapté dans lequel <br> 
-      votre compagnon quadrupède pourrait s’épanouir ? <br>
-      Je suis Fabienne Guinet, à Chimilin, au cœur de la <br> 
-      région Auvergne Rhône Alpes !
+      <?php echo get_field('txt_pres'); ?>
       </p>
-    <div class="button">
-      <a href="http://projet-multipattes.test/a-propos-de-moi/">En savoir plus</a>
-    </div>
+      <?php $monlien=get_field('present_qui_suis-je')['lien_bouton'];
+      ?>
+      <a class="button" href="<?php echo $monlien['url'] ?>" > <?php echo $monlien['title'] ?></a>
   </div>
 </section>
 <section class="services">
@@ -121,31 +136,92 @@ if ($youtube_link) {
   </div>
 <div class="grid-container">
   <div class="item item1">
-    <img src="http://projet-multipattes.test/wp-content/uploads/2025/01/20240127_190206-scaled.jpg" alt="Garde de chien pathologique">
+  <?php 
+// Récupérer le champ ACF 'img_pres'
+$img_guard = get_field('img_gard_patho');
+
+// Vérifier si le tableau contient une clé 'url'
+if (!empty($img_guard['url'])) {
+    // Afficher l'image avec l'URL récupérée
+    echo '<img src="' . esc_url($img_guard['url']) . '" alt="Image Illustration">';
+} else {
+    // Message en cas d'absence d'URL
+    echo 'Aucune image de présentation disponible.';
+}
+?>
     <div class="item-text">Garde de chien pathologique</div>
   </div>
   <div class="item item2">
-    <img src="http://projet-multipattes.test/wp-content/uploads/2025/01/20240127_190206-scaled.jpg" alt="Parc de jeu canin">
+  <?php 
+// Récupérer le champ ACF 'img_pres'
+$img_park = get_field('img_park_canin');
+
+// Vérifier si le tableau contient une clé 'url'
+if (!empty($img_park['url'])) {
+    // Afficher l'image avec l'URL récupérée
+    echo '<img src="' . esc_url($img_park['url']) . '" alt="Image Illustration">';
+} else {
+    // Message en cas d'absence d'URL
+    echo 'Aucune image de présentation disponible.';
+}
+?>
     <div class="item-text">Parc de jeu canin</div>
   </div>
   <div class="item item3">
-    <img src="http://projet-multipattes.test/wp-content/uploads/2025/01/20240127_190206-scaled.jpg" alt="Diplôme CESCCAM">
+  <?php 
+// Récupérer le champ ACF 'img_pres'
+$img_dipl = get_field('img_diplom');
+
+// Vérifier si le tableau contient une clé 'url'
+if (!empty($img_dipl['url'])) {
+    // Afficher l'image avec l'URL récupérée
+    echo '<img src="' . esc_url($img_dipl['url']) . '" alt="Image Illustration">';
+} else {
+    // Message en cas d'absence d'URL
+    echo 'Aucune image de présentation disponible.';
+}
+?>
     <div class="item-text">Diplôme CESCCAM</div>
   </div>
   <div class="item item4">
-    <img src="http://projet-multipattes.test/wp-content/uploads/2025/01/20240127_190206-scaled.jpg" alt="Préparation physique">
+  <?php 
+// Récupérer le champ ACF 'img_pres'
+$img_phy = get_field('img_pre_phy');
+
+// Vérifier si le tableau contient une clé 'url'
+if (!empty($img_phy['url'])) {
+    // Afficher l'image avec l'URL récupérée
+    echo '<img src="' . esc_url($img_phy['url']) . '" alt="Image Illustration">';
+} else {
+    // Message en cas d'absence d'URL
+    echo 'Aucune image de présentation disponible.';
+}
+?>
     <div class="item-text">Préparation physique</div>
   </div>
   <div class="item item5">
-    <img src="http://projet-multipattes.test/wp-content/uploads/2025/01/20240127_190206-scaled.jpg" alt="Remplacement de poste ASV">
+  <?php 
+// Récupérer le champ ACF 'img_pres'
+$asv = get_field('img_asv');
+
+// Vérifier si le tableau contient une clé 'url'
+if (!empty($asv['url'])) {
+    // Afficher l'image avec l'URL récupérée
+    echo '<img src="' . esc_url($asv['url']) . '" alt="Image Illustration">';
+} else {
+    // Message en cas d'absence d'URL
+    echo 'Aucune image de présentation disponible.';
+}
+?>
     <div class="item-text">Remplacement de poste ASV</div>
   </div>
 </div>
-  <div class="button">
-    <h2>
-      Tous les services
-    </h2>
-  </div>
+<div class="button-container">
+<?php $services=get_field('services')['tous_les_services'];
+      ?>
+      <a class="button" href="<?php echo $monlien['url'] ?>" > <?php echo $monlien['title'] ?></a>
+</div>
+
 </section>
 <section class="end">
   <div class="title">

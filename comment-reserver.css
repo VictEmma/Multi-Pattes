@@ -1,0 +1,118 @@
+body.page-template-comment-reserver {
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.6;
+    color: #000000;
+    background-color: #fff;
+    margin: 0;
+    padding: 0;
+
+    h1 {
+        font-size: 85px;
+        text-align: center;
+        color: #000000;
+        margin: 120px auto 120px;
+        font-weight: 700;
+    }
+
+    strong {
+        font-weight: 700;
+    }
+
+    span {
+        font-weight: 700;
+    }
+    
+    .contact-section {
+        background: #FFFBE7;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        padding: 50px 100px;
+        gap: 20px;
+        flex-direction: column;
+    }
+
+    .content-wrapper {
+        display: flex;
+        flex-wrap: wrap; /* Permet d'adapter les éléments */
+        justify-content: space-between;
+        gap: 138px;
+        width: 100%;
+    }
+    
+    .contact-info {
+        flex: 1;
+        max-width: 30%;
+        font-size: 16px;
+    }
+    
+    .contact-info p {
+        margin-bottom: 20px;
+        font-size: 16px;
+        justify-content: flex-start;
+    }
+    
+    .phone-info {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        margin-bottom: 20px;
+        font-size: 16px;
+    }
+    
+    .phone-info .icon {
+        width: 20px;
+        height: 20px;
+    }
+    
+    .button {
+        display: inline-block;
+        padding: 10px 20px;
+        background-color: #FFED00;
+        color: #000000;
+        text-decoration: none;
+        font-weight: bold;
+        border-radius: 14px;
+        text-align: center;
+        transition: background-color 0.3s ease;
+        font-size: 16px;
+    }
+    
+    .button:hover {
+        background-color: #ffee00b3;
+    }
+    
+    .info-section {
+        flex: 2;
+        max-width: 40%;
+        font-size: 16px;
+    }
+    
+    .info-box {
+        padding: 20px;
+        border-radius: 14px;
+        margin-bottom: 20px;
+        text-align: left;
+        font-size: 16px;
+    }
+    
+    .info-box h2 {
+        background-color: #FFED00;
+        font-size: 28px;
+        margin-bottom: 10px;
+        font-size: 28px;
+    }
+    
+    .image-section {
+        flex: 1;
+        max-width: 409px;
+        height: 488px;
+    }
+    
+    .dog-image {
+        max-width: 409px;
+        height: 488px;
+        border-radius: 20px;
+    }
+    
+}

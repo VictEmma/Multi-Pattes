@@ -8,6 +8,10 @@ function add_styles() {
   wp_enqueue_style('qui-suis-je-style', get_template_directory_uri() . '/who_style.css');
   wp_enqueue_style('services', get_template_directory_uri() . '/services.css');
   wp_enqueue_style('remplacement-asv', get_template_directory_uri() . '/remplacement-asv.css');
+  wp_enqueue_style('messervices', get_template_directory_uri() . '/les_services.css');
+  wp_enqueue_style('truffinoscope', get_template_directory_uri() . '/truffinoscope.css');
+  wp_enqueue_style('park', get_template_directory_uri() . '/park.css');
+  wp_enqueue_style('reservation', get_template_directory_uri() . '/comment-reserver.css');
 }
 
 // Une seule action pour enqueuer les styles
@@ -27,7 +31,7 @@ function add_button_to_specific_page($content) {
     if (is_page('services')) { // Remplacez 'services' par le slug ou l'ID de la page
         $button = render_dynamic_button(array(
             'text' => 'Découvrez nos services',
-            'svg_url' => 'http://projet-multipattes.test/wp-content/uploads/2025/01/Patounne.svg',
+            'svg_url' => '<?php echo get_template_directory_uri(); ?>/img/Patounne.svg',
         ));
         // Ajouter le bouton après le contenu
         return $content . $button;

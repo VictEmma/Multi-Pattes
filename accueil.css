@@ -94,11 +94,7 @@
       border-radius: 20px;
     }
   } 
-.start .who-is .button {
-  display: flex;
-  justify-content: center;
-  margin-top:84px;
-}
+
 .start .youtube-video {
   display: flex;
   justify-content: center; /* Centre horizontalement */
@@ -121,9 +117,10 @@
   justify-content: center;
   padding:64px;
 }
+.services .button-container{
+  text-align:center;
+}
 .services .button{
-  display: flex;
-  justify-content: center;
   margin-top:64px;
 }
 .services .grid-container {
