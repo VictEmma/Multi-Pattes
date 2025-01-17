@@ -50,5 +50,10 @@ body.page-template-mentions-legales {
    .title {
       padding: 20px 20px !important;
    }
+
+   .about p {
+      margin-bottom: 2px;
+   }
+
 }
 }
