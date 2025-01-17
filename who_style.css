@@ -98,18 +98,112 @@ strong {
    max-width: 50%;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
+   /* Section img-txt: Ajustement des espaces et alignement */
    .img-txt {
-      flex-direction: column; /* Passe en colonne sur petits écrans */
+      flex-direction: column !important; /* Passe en colonne */
+      align-items: center !important; /* Centre les éléments */
+      gap: 20px !important;
    }
 
-   .img-txt p, .img-txt img {
-      color: #000000;
-      max-width: 100%; /* Prend toute la largeur disponible */
+   .img-txt p {
+      max-width: 90% !important; /* Réduit la largeur du texte */
+      margin: 0 auto !important; 
+      font-size: 14px !important;
+      text-align: justify !important;
+   }
+
+   .img-txt img {
+      max-width: 90% !important; /* Réduit la taille de l'image */
+      height: auto !important; /* Maintient le ratio */
+   }
+
+   /* Ajustement de la section additional */
+   .additional {
+      flex-direction: column !important; /* Passe en colonne */
+      align-items: center !important; /* Centre les éléments */
+      gap: 20px !important; /* Ajoute de l'espace entre les éléments */
+      margin-top: 30px !important;
+   }
+
+   .additional p {
+      max-width: 90% !important; /* Réduit la largeur du texte */
+      margin: 0 auto !important; 
+      text-align: center !important;
+      text-align: justify !important;
    }
 
    .additional iframe {
-      max-width: 100%; /* L'iframe occupe toute la largeur */
+      width: 90% !important; /* Adapte la carte à l'écran */
+      height: auto !important; /* Ajuste automatiquement la hauteur */
+   }
+
+   /* Titre */
+   .title {
+      margin-left: 0 !important; /* Supprime la marge gauche */
+      margin-top: 50px !important; /* Réduit l'espace au-dessus */
+      text-align: center !important; /* Centre le titre */
+   }
+}
+
+@media (max-width: 768px) {
+   /* H1 ajustement */
+   h1 {
+      font-size: 40px !important; /* Réduit la taille de la police */
+      margin: 20px auto !important; /* Réduit les marges */
+   }
+
+   /* Intro texte */
+   .intro-text {
+      font-size: 16px !important; /* Réduit la taille de la police */
+      margin-left: 20px !important; /* Réduit les marges sur mobile */
+      margin-right: 20px !important;
+   }
+
+   /* Section img-txt */
+   .img-txt p {
+      font-size: 14px !important; /* Réduit la taille du texte */
+      line-height: 1.6 !important;
+      text-align: justify !important;
+   }
+
+   .img-txt img {
+      max-width: 100% !important; /* Prend toute la largeur */
+   }
+
+   /* Additional Section */
+   .additional iframe {
+      width: 100% !important; /* Prend toute la largeur */
+      height: 300px !important; /* Ajuste une hauteur fixe pour petits écrans */
+   }
+
+   .additional p {
+      font-size: 16px !important; 
+      text-align: center !important;
+      text-align: justify !important;
+   }
+}
+
+@media (max-width: 480px) {
+   /* Section img-txt */
+   .img-txt p {
+      font-size: 14px !important; /* Texte encore plus petit pour les écrans étroits */
+   }
+
+   .img-txt img {
+      width: 100% !important; /* Adapte parfaitement l'image à l'écran */
+      height: auto !important;
+   }
+
+   /* Additional Section */
+   .additional iframe {
+      height: 200px !important; /* Réduit encore la hauteur de l'iframe */
+   }
+
+   .additional p {
+      font-size: 14px !important; /* Réduit la taille du texte */
+      text-align: center !important;
+      text-align: justify !important; /* Centre le texte sur les très petits écrans */
    }
 }
 }

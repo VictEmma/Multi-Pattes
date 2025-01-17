@@ -1,3 +1,4 @@
+<?php /* Template Name: acceuil */ ?>
 <?php get_header(); ?>
     <div class="ticker-wrapper">
   <div class="ticker">

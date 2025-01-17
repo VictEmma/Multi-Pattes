@@ -35,8 +35,11 @@ body.page-template-services {
 
     .first .icon-and-text {
         display: flex;
-        align-items: center; /* Aligne verticalement */
+        flex-direction: column;
+        align-items: left; /* Aligne verticalement */
         gap: 17.44px; /* Espace entre l'icône et le texte */
+        flex-wrap: wrap; /* Permet d'adapter les éléments */
+        justify-content: space-between;
     }
 
     .first h2 {
@@ -49,24 +52,7 @@ body.page-template-services {
         font-size: 20px;
         margin: 0;
     }
-    
-    .first .button {
-        background-color: #FFED00; /* Jaune bouton */
-        color: #000000;
-        padding: 10px 20px;
-        display: inline-block;
-        text-align: center;
-        border-radius: 14px;
-        font-weight: bold;
-        margin-top: 20px;
-        cursor: pointer;
-        max-width: 30%;
-    }
-    
-    .first .button:hover {
-        background-color: #ffee00b3; /* Variation au survol */
-    }
-    
+
     .img {
         max-width: 50%; /* L'image occupe 50% */
         border-radius: 8px;

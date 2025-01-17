@@ -30,13 +30,25 @@ body.page-template-mentions-legales {
 
  .title h2 {
     font-size: 24px;
-    text-align: left;
  }
 
  .title p {
     font-size: 16px;
     line-height: 1.8;
     color: #000000;
-    text-align: left;
  }
+
+ @media only screen and (max-width: 600px){
+   h1{
+      font-size: 36px !important;
+   }
+
+   .about{
+      padding: 10px 10px !important;
+   }
+
+   .title {
+      padding: 20px 20px !important;
+   }
+}
 }
