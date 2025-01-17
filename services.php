@@ -1,16 +1,17 @@
 <?php /* Template Name: Mes services */ ?>
 <?php get_header(); ?>
+
     <h1>Mes services</h1>
     <section class="about">
         <div class="first">
             <div class="icon-and-text">
             <img src=""<?php echo get_template_directory_uri(); ?>/img/Patounne.svg" alt="Physiothérapie" class="icon">
             <h2>Garde chien pathologique</h2>
+            </div>
             <h3>Vous êtes en quête d'une personne à qui confier<br>votre chien âgé ou handicapé ? Ne cherchez plus !</h3>
             <p class="button">En savoir +</p>
-            <img src="<?php echo get_template_directory_uri(); ?>/img/sample.png" alt="Rééducation" class="img">
         </div>
-        </div>
+        <img src="<?php echo get_template_directory_uri(); ?>/img/sample.png" alt="Rééducation" class="img">
         <img src="<?php echo get_template_directory_uri(); ?>/img/sample.png" alt="Rééducation" class="img">
         <div class="first">
             <div class="icon-and-text">
