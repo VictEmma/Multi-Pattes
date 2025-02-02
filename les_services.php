@@ -10,18 +10,20 @@
     <div class="content">
     <?php 
     $blocs = get_field('blocks');
-   
-    foreach ($blocs as $key => $bloc) {
-        echo "<pre>";
-        //var_dump($bloc);
-        echo "</pre>";
 
-        //echo $bloc['text'];
-        //echo $bloc['image']['url'];
+    if ($blocs && is_array($blocs)) { 
+        foreach ($blocs as $bloc) { 
+            if (!empty($bloc['text'])) {
+                echo "<p>" . esc_html($bloc['text']) . "</p>";
+            }
+            if (!empty($bloc['image']['url'])) {
+                echo '<img src="' . esc_url($bloc['image']['url']) . '" alt="Image de présentation">';
+            }
+        }
+    } else {
+        echo "<p>Aucun contenu disponible.</p>";
     }
-   ?>
-    <p><?php echo $bloc['text']; ?></p>
-    <img src="<?php echo $bloc['image']['url']; ?>" alt="Image de présentation">
+    ?>
 </div>
 
     <p class="end-text">
