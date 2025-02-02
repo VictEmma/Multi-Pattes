@@ -11,17 +11,14 @@
     <?php 
     $blocs = get_field('blocks');
 
-    if ($blocs && is_array($blocs)) { 
-        foreach ($blocs as $bloc) { 
-            if (!empty($bloc['text'])) {
-                echo "<p>" . esc_html($bloc['text']) . "</p>";
-            }
-            if (!empty($bloc['image']['url'])) {
-                echo '<img src="' . esc_url($bloc['image']['url']) . '" alt="Image de présentation">';
-            }
+    foreach ($blocs as $key => $bloc) {
+        if ($key % 2 == 0) { // Texte avant image
+            echo "<p>{$bloc['text']}</p>";
+            echo "<img src='{$bloc['image']['url']}' alt='Image de présentation'>";
+        } else { // Image avant texte
+            echo "<img src='{$bloc['image']['url']}' alt='Image de présentation'>";
+            echo "<p>{$bloc['text']}</p>";
         }
-    } else {
-        echo "<p>Aucun contenu disponible.</p>";
     }
     ?>
 </div>
