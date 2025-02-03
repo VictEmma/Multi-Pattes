@@ -17,6 +17,85 @@ body.page-template-les_services{
         text-align: center;
         font-size: 40px;
     }
+
+
+    body.page-template-les_services {
+        font-family: 'Montserrat', sans-serif;
+        line-height: 1.6;
+        color: #000000;
+        background-color: #fff;
+        margin: 0;
+        padding: 0;
+    }
+    
+    h1 {
+        font-size: 48px;
+        text-align: center;
+        color: #000000;
+        margin: 120px auto;
+        padding: 0;
+        font-weight: 700;
+    }
+    
+    h2 {
+        text-align: center;
+        font-size: 40px;
+    }
+    
+    .principal {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 50px 20px;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+    
+    .content {
+        display: flex;
+        flex-direction: column; /* Met les blocs en colonne */
+        gap: 40px; /* Espacement entre les blocs */
+        width: 100%;
+        max-width: 1000px;
+    }
+    
+    .bloc {
+        display: flex;
+        align-items: center; /* Centre verticalement */
+        gap: 20px; /* Espace entre texte et image */
+        width: 100%;
+        max-width: 900px;
+    }
+    
+    /* Applique directement la flex-direction selon l'alternance de ton PHP */
+    .bloc:nth-child(odd) {
+        flex-direction: row; /* Texte à gauche, image à droite */
+    }
+    
+    .bloc:nth-child(even) {
+        flex-direction: row-reverse; /* Image à gauche, texte à droite */
+    }
+    
+    .bloc img {
+        max-width: 300px; /* Taille d'image ajustable */
+        height: auto;
+        border-radius: 10px;
+    }
+    
+    .bloc p {
+        flex: 1; /* Prend tout l'espace restant */
+        font-size: 18px;
+        margin: 0;
+    }
+    
+    /* Responsive : en colonne sur mobile */
+    @media (max-width: 768px) {
+        .bloc {
+            flex-direction: column !important;
+            text-align: center;
+        }
+    }
+    
     .park{
         background-color: #FFFBE7;
         padding: 62px 180px;
