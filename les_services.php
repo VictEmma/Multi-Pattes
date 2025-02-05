@@ -25,11 +25,15 @@
         ?>
     </div>
 </section>
+<section class="end">
     <p class="end-text">
     <?php echo get_field('text'); ?>
     </p>
+    <div class ="price-contact">
     <p class="price">
     <?php echo get_field('price'); ?>
     </p>
+    <a class="button" href="<?php echo $monlien['url'] ?>" > <?php echo $monlien['title'] ?></a>
+    </div>
 </section>
 <?php get_footer(); ?>
