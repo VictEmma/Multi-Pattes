@@ -14,7 +14,9 @@
     <div class="content-wrapper">
         <div class="info-section">
             <div class="info-box">
+                <div class="title">
                 <h2>À savoir</h2>
+                </div>
                 <p>Vous souhaitez pouvoir vous occuper d'un chien catégorisé ?<br>
                     C'est possible à l'aide de la <strong>formation CESCCAM</strong>, que je peux<br>vous faire passer. 
                     Contactez-moi pour plus d'informations, ou<br>pour choisir une date de passage !

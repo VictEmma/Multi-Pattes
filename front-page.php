@@ -117,21 +117,21 @@ if (!empty($img_pres['url'])) {
     <div class="who-text">
     
       <div class="title">
-        <h2>
+        <h2 class="yellow-title">
           Qui suis-je ?
         </h2>
       </div>
       <p>
       <?php echo get_field('txt_pres'); ?>
       </p>
-      <?php $monlien=get_field('present_qui_suis-je')['lien_bouton'];
+      <?php $monlien=get_field('lien_bouton');
       ?>
       <a class="button" href="<?php echo $monlien['url'] ?>" > <?php echo $monlien['title'] ?></a>
   </div>
 </section>
 <section class="services">
   <div class="title">
-    <h2>
+    <h2 class="yellow-title">
       Services proposés
     </h2>
   </div>
@@ -218,15 +218,15 @@ if (!empty($asv['url'])) {
   </div>
 </div>
 <div class="button-container">
-<?php $services=get_field('services')['tous_les_services'];
+<?php $services=get_field('tous_les_services');
       ?>
-      <a class="button" href="<?php echo $monlien['url'] ?>" > <?php echo $monlien['title'] ?></a>
+      <a class="button" href="<?php echo $services['url'] ?>" > <?php echo $services['title'] ?></a>
 </div>
 
 </section>
 <section class="end">
   <div class="title">
-    <h2>
+    <h2 class="yellow-title">
       Mes retours clients
     </h2>
   </div>

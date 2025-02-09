@@ -106,6 +106,12 @@ body.page-template-les_services {
         justify-content: center;
         align-items: center;
         gap: 40px;
+        .price {
+            font-size: 36px; /* Ajoute "px" sinon ça ne marchera pas */
+            font-weight: bold;
+            color: black; /* Optionnel : adapte la couleur du texte */
+            text-shadow: 3px 3px 0 #FFED00; /* Ombre jaune */
+        }
     }
     
     /* Responsive : en colonne sur mobile */
