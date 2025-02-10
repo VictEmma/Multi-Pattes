@@ -225,10 +225,73 @@ if (!empty($asv['url'])) {
 
 </section>
 <section class="end">
-  <div class="title">
-    <h2 class="yellow-title">
-      Mes retours clients
-    </h2>
-  </div>
+    <div class="title">
+        <h2 class="yellow-title">Mes retours clients</h2>
+
+        <?php if (have_rows('carrousel_images')): ?>
+            <div class="custom-carousel">
+                <div class="carousel-container">
+                    <?php 
+                    $images = []; 
+                    while (have_rows('carrousel_images')): the_row(); 
+                        $image = get_sub_field('image');
+                        if ($image): 
+                            $images[] = esc_url($image['url']);
+                        endif;
+                    endwhile;
+                    ?>
+
+                    <?php if (!empty($images)): ?>
+                        <img id="carousel-image" src="<?php echo $images[0]; ?>" alt="Carrousel">
+                    <?php endif; ?>
+                </div>
+
+                <!-- Boutons de navigation -->
+                <div class="carousel-button-prev">
+                    <img src="<?php echo get_template_directory_uri(); ?>/img/carrousel_button.svg" alt="Précédent">
+                </div>
+                <div class="carousel-button-next">
+                    <img src="<?php echo get_template_directory_uri(); ?>/img/carrousel_button.svg" alt="Suivant" class="reverse">
+                </div>
+            </div>
+
+            <!-- On passe les images en JSON pour le script -->
+            <script>
+                var carouselImages = <?php echo json_encode($images); ?>;
+            </script>
+        <?php endif; ?>
+    </div>
 </section>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    let currentIndex = 0;
+    const imgElement = document.getElementById("carousel-image");
+    const prevButton = document.querySelector(".carousel-button-prev");
+    const nextButton = document.querySelector(".carousel-button-next");
+
+    if (!carouselImages || carouselImages.length === 0) {
+        console.error("Aucune image trouvée pour le carrousel.");
+        return;
+    }
+
+    function updateImage(index) {
+        imgElement.style.opacity = 0;
+        setTimeout(() => {
+            imgElement.src = carouselImages[index];
+            imgElement.style.opacity = 1;
+        }, 300);
+    }
+
+    prevButton.addEventListener("click", function () {
+        currentIndex = (currentIndex - 1 + carouselImages.length) % carouselImages.length;
+        updateImage(currentIndex);
+    });
+
+    nextButton.addEventListener("click", function () {
+        currentIndex = (currentIndex + 1) % carouselImages.length;
+        updateImage(currentIndex);
+    });
+});
+</script>
+
 <?php get_footer(); ?>
