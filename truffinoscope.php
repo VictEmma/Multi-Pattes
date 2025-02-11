@@ -5,46 +5,29 @@
 
 <section class="about">
     <div class="coucou">
-        <h3>Qu'est-ce que c'est ?</h3>
+        <h2>Qu'est-ce que c'est ?</h2>
     </div>
-    <p>Voici le Truffinoscope ! Un répertoire de toutes les photos des chiens dont j'ai pu m'occuper.<br>
-        J'aime garder des souvenirs des petits chous que j'ai gardés pour que vous puissiez également craquer devant ces<br>
-        petites bouilles !
+    <p><?php 
+    $introduction = get_field('introduction'); 
+    if ($introduction) {
+        echo $introduction; // Affichage direct car c'est du contenu WYSIWYG
+    }
+?>
     </p>
+    <?php if (have_rows('pensionnaire')): ?>
     <div class="gallery">
+        <?php while (have_rows('pensionnaire')): the_row(); 
+            $image = get_sub_field('photo_pensionnaire'); // Récupère l'image
+            $nom = get_sub_field('nom_pensionnaire'); // Récupère le nom
+        ?>
         <div class="gallery-item">
-            <img src="<?php echo get_template_directory_uri(); ?>/img/sample.png" alt="Chien">
-            <h2>Nom</h2>
+            <img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($nom); ?>">
+            <h2><?php echo esc_html($nom); ?></h2>
         </div>
-        <div class="gallery-item">
-            <img src="<?php echo get_template_directory_uri(); ?>/img/sample.png" alt="Chien">
-            <h2>Nom</h2>
-        </div>
-        <div class="gallery-item">
-            <img src="<?php echo get_template_directory_uri(); ?>/img/sample.png" alt="Chien">
-            <h2>Nom</h2>
-        </div>
-        <div class="gallery-item">
-            <img src="<?php echo get_template_directory_uri(); ?>/img/sample.png" alt="Chien">
-            <h2>Nom</h2>
-        </div>
-        <div class="gallery-item">
-            <img src="<?php echo get_template_directory_uri(); ?>/img/sample.png" alt="Chien">
-            <h2>Nom</h2>
-        </div>
-        <div class="gallery-item">
-            <img src="<?php echo get_template_directory_uri(); ?>/img/sample.png" alt="Chien">
-            <h2>Nom</h2>
-        </div>
-        <div class="gallery-item">
-            <img src="<?php echo get_template_directory_uri(); ?>/img/sample.png" alt="Chien">
-            <h2>Nom</h2>
-        </div>
-        <div class="gallery-item">
-            <img src="<?php echo get_template_directory_uri(); ?>/img/sample.png" alt="Chien">
-            <h2>Nom</h2>
-        </div>
+        <?php endwhile; ?>
     </div>
+<?php endif; ?>
+
 </section>
 
 

@@ -126,7 +126,9 @@ if (!empty($img_pres['url'])) {
       </p>
       <?php $monlien=get_field('lien_bouton');
       ?>
+      <div class="button-container">
       <a class="button" href="<?php echo $monlien['url'] ?>" > <?php echo $monlien['title'] ?></a>
+      </div>
   </div>
 </section>
 <section class="services">

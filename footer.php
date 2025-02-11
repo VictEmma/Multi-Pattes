@@ -48,28 +48,5 @@
     <img src="<?php echo get_template_directory_uri(); ?>/img/Patounne.svg" alt="Patte">
   </div>
 </footer>
-<!-- Swiper JS -->
-<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-
-<!-- Script pour le carrousel -->
-<script>
-document.addEventListener("DOMContentLoaded", function () {
-    let images = <?php echo json_encode($images); ?>;
-    let currentIndex = 0;
-    const imgElement = document.getElementById("carousel-image");
-    const prevButton = document.querySelector(".carousel-button-prev");
-    const nextButton = document.querySelector(".carousel-button-next");
-
-    prevButton.addEventListener("click", function () {
-        currentIndex = (currentIndex - 1 + images.length) % images.length;
-        imgElement.src = images[currentIndex];
-    });
-
-    nextButton.addEventListener("click", function () {
-        currentIndex = (currentIndex + 1) % images.length;
-        imgElement.src = images[currentIndex];
-    });
-});
-</script>
 </body>
 </html>

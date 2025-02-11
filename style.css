@@ -2,6 +2,12 @@
  * Thème Name: Thème Multipattes Site
  * Version : 1.0.0
  */
+ body {
+  background: url('img/papier_paint.svg') repeat;
+  background-size: auto;
+}
+
+
  h1{
    font-size:85px;
  }
@@ -15,7 +21,18 @@
  p{
    font-size:16px;
  }
- 
+ .custom-title {
+  font-family: "Montserrat", sans-serif;
+  background-color: #FFED00;
+  font-size: 24px; /* Taille du texte */
+  font-weight: bold;
+  color: #000; /* Couleur du texte */
+  margin: 0;
+  text-align: center;
+  padding: 10px 100px;
+  margin-bottom: 20px;
+  clip-path: polygon(10% 0%, 100% 0%, 90% 100%, 0% 100%);
+}
  .custom-button {
    display: inline-flex;
    align-items: center;
@@ -78,7 +95,7 @@
   align-items: center;
   overflow: hidden;
   position: relative;
-  background-color: #f0f0f0; /* Test visuel pour voir le conteneur *
+  background-color: #f0f0f0; /* Test visuel pour voir le conteneur */
 }
 
 #carousel-image {
@@ -107,12 +124,15 @@
 }
 
 .carousel-button-prev {
-  background-color: red !important;
+  left: 0px;
+  transform: translateY(-50%) scaleX(-1); /* Inverser horizontalement */
 }
 
 .carousel-button-next {
-  background-color: blue !important;
+  right: 0px;
+  transform: translateY(-50%); /* Pas d'inversion pour le bouton suivant */
 }
+
 .carousel-button-prev img,
 .carousel-button-next img {
   pointer-events: auto;

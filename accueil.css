@@ -86,8 +86,12 @@
   justify-content: center;
   align-items: center;
   gap: 100px;
+  .button-container{
+    text-align:center;
+  }
     p {
       text-align: center;
+      width: 452px;
     }
     img {
       width: 446px;

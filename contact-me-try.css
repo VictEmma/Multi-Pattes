@@ -42,6 +42,7 @@ body.page-template-contact-me-try {
     align-items: center; /* Aligne l'image et le texte verticalement */
     flex-wrap: wrap; 
 /* En cas de petit écran, les éléments passent en colonne */
+
  }
 
  /*.img-txt .title .reseaux {
@@ -58,28 +59,32 @@ body.page-template-contact-me-try {
     display: flex;
     justify-content: center; /* Centre les icônes */
     gap: 20px; /* Espace entre les icônes */
+    img{
+        width: 80px;
+        height: 80px;
+    }
 }
-
+.docs {
+    display: flex;
+    justify-content: center;  /* Centre l'image horizontalement */
+    align-items: center;      /* Centre l'image verticalement */
+    flex-direction: column;   /* Garde l'orientation verticale */
+    gap: 20px;                /* Espace entre l'image et le texte */
+}
+.img-txt .docs{
+    display: flex; /* Centre les icônes */
+    flex-direction: column;
+    gap: 20px; /* Espace entre les icônes */
+}
  .ineedflex {
     display: flex;
     align-items: center;
     margin-bottom: 15px;
  }
  
- .img-txt .img-docs {
-    font-size: 18px;
-    line-height: 1.8;
-    color: #000000;
-    max-width: 50%; /* Limite la largeur du texte */
-    text-align: justify;
- }
 
- .about img {
-    flex-direction: row;
-    max-width: 50%;
-    height: auto;
-    border-radius: 8px;
- }
+
+
 
  .additional input,
 .additional textarea {
@@ -93,22 +98,10 @@ body.page-template-contact-me-try {
     margin-bottom: 20px;
 }
 
- .custom-title {
-    font-family: "Montserrat", sans-serif;
-    background-color: #FFED00;
-    font-size: 24px; /* Taille du texte */
-    font-weight: bold;
-    color: #000; /* Couleur du texte */
-    margin: 0;
-    text-align: center;
-    margin-bottom: 20px;
-    clip-path: polygon(10% 0%, 100% 0%, 90% 100%, 0% 100%);
- }
+ 
 
  .title h2 {
     color: #000000;
-    display: flex;
-    align-items: left;
     margin-left: 180px;
     font-size: 28px;
     line-height: 1.8;
@@ -154,17 +147,15 @@ body.page-template-contact-me-try {
  }
 
  .additional form button {
-    margin-top: 20px; /* Espacement par rapport au champ précédent */
-    background-color: #FFED00; /* Bouton jaune */
-    color: #000; /* Texte noir */
-    border: none; /* Supprime la bordure par défaut */
-    padding: 10px 20px; /* Taille du bouton */
     cursor: pointer; 
-    align-content: center;/* Change le curseur au survol */
+    border: none;
 }
  
  .additional form {
-    flex-direction: row;
+    display: flex;
+    flex-direction: column;  /* Empile les éléments du formulaire verticalement */
+    align-items: center;     /* Centre les éléments horizontalement */
+    gap: 20px;  
     color: #000000;
     font-size: 18px;
     line-height: 1.8;
@@ -175,12 +166,12 @@ body.page-template-contact-me-try {
  
  @media (max-width: 768px) {
     h1 {
-        font-size: 36px !important;
+        font-size: 36px;
         margin: 60px auto;
     }
 
     h2 {
-        font-size: 20px !important;
+        font-size: 20px;
     }
 
     .about {
