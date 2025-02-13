@@ -1,5 +1,5 @@
-/* Style du menu principal (header) */
-header ul {
+/* --- Styles pour le menu desktop (PC) --- */
+.menu-desktop {
     background-color: #FFFBE7;
     padding: 25px;
     margin: 0;
@@ -8,121 +8,113 @@ header ul {
     justify-content: space-evenly;
     gap: 13px;
     list-style: none;
-    transition: all 0.3s ease;
 }
 
-header ul img {
+.menu-desktop img {
     width: 100%;
     height: 41px;
 }
 
-header ul li a {
+.menu-desktop li a {
     text-decoration: none;
     color: black;
     font-size: 18px;
     font-family: 'Montserrat', sans-serif;
     font-weight: bold;
     text-align: center;
-    display: inline-block;
-    transition: transform 0.3s ease, color 0.3s ease;
 }
 
-header ul li a:hover {
-    transform: scale(1.1);
-    color: #007BFF;
+/* --- Menu burger (mobile) --- */
+.menu-mobile {
+    display: none; /* Caché par défaut */
 }
 
-header ul li {
-    position: relative;
-    transition: transform 0.3s ease;
+/* --- Styles du menu latéral (mobile) --- */
+.sidenav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translateY(-100%);
+    transition: transform 0.3s ease-in-out;
+    z-index: 10;
+
 }
 
-header ul li:hover {
-    transform: translateY(-5px);
+.sidenav.active {
+    transform: translateY(0);
 }
 
-/* Responsivité pour les écrans plus petits */
+.sidenav ul {
+    list-style: none;
+    text-align: center;
+    padding: 0;
+}
+
+.sidenav ul li {
+    margin: 20px 0;
+}
+
+.sidenav ul li a {
+    font-size: 24px;
+    color: white;
+    text-decoration: none;
+}
+
+/* --- Icône burger --- */
+.burger-icon {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+}
+
+.burger-icon span {
+    display: block;
+    width: 30px;
+    height: 4px;
+    background-color: black;
+    transition: 0.3s;
+}
+
+/* --- Bouton pour fermer le menu --- */
+.sidenav .close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    font-size: 40px;
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* --- Responsive pour Mobile --- */
 @media (max-width: 768px) {
-    header ul {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    /* Masquer les éléments du menu principal sur petit écran */
-    header ul li {
+    /* Cache le menu classique */
+    .menu-desktop {
         display: none;
     }
 
-    /* Menu latéral (sidenav) */
-    .sidenav {
-        display: inline;
-        height: 100%;
-        width: 0;
-        position: fixed;
-        z-index: 1;
+    /* Affiche le menu burger */
+    .menu-mobile {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        padding: 20px;
+        position: absolute;
         top: 0;
         left: 0;
-        background-color: #e8e8e8;
-        overflow-x: hidden;
-        transition: width 0.3s ease;
+        background-color: #FFFBE7;
+        z-index: 10; /* Plus élevé que le titre */
     }
 
-    .sidenav a {
-        padding: 10px;
-        text-decoration: none;
-        font-size: 25px;
-        color: #818181;
-        display: inline;
-        transition: 0.3s;
-    }
-
-    .sidenav a:hover {
-        color: #111;
-    }
-
-    .sidenav ul {
-        list-style-type: none;
-        padding-top: 15vw;
-        margin: 0;
-        display: flex;
-        flex-direction: column;
-    }
-
-    .sidenav.active {
-        width: 250px;
-    }
-
-    .sidenav .close {
-        position: absolute;
-        top: 10px;
-        right: 20px;
-        font-size: 36px;
-        cursor: pointer;
-    }
-
-    /* Icône burger */
-    .burger-icon span {
-        display: block;
-        width: 10vw;
-        height: 1.2vw;
-        background-color: black;
-        margin: 2vw 0;
-    }
-}
-
-/* Afficher le menu latéral sur desktop (écrans larges) */
-@media (min-width: 769px) {
-    /* Cacher le menu latéral sur desktop */
-    .sidenav {
-        display: none; /* Menu latéral caché par défaut */
-    }
-
-    /* Afficher uniquement le menu principal sur desktop */
-    header ul li {
-        display: block; /* Réafficher les éléments de la barre de navigation */
-    }
-
-    .burger-icon {
-        display: none; /* Masquer le bouton burger sur desktop */
+    .menu-mobile img {
+        height: 41px; /* Taille du logo */
     }
 }

@@ -8,7 +8,7 @@ body {
 footer {
    background-color: #231F20; /* Couleur du fond */
    color: #FFFBE7; /* Couleur du texte */
-   padding: 2rem;
+   padding: 20px;
    position: relative;
    display: flex;
    justify-content: space-between; /* Distribue les éléments sur toute la largeur */
@@ -190,86 +190,100 @@ footer {
    margin-right: 0.5rem; /* Espacement entre l'icône et le texte */
  }
  
- @media (max-width: 768px){
-  body {
+ @media (max-width: 768px) {
+   body {
      margin: 0;
      font-family: "Montserrat", sans-serif;
+   }
+   footer {
+      width: 100%;
+   }
+   .footer-socials {
+     display: flex;
+     justify-content: center;
+     width: 100%;
+   }
+ 
+   .footer-info {
+     margin: 0;
+     width: 100%;
+     text-align: center;
+   }
+ 
+   .footer-container {
+     flex-direction: column;
+     width: 100%;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     text-align: center;
+   }
+ 
+   .footer-socials {
+     margin-top: 5%;
+     width: 50%;
+     justify-content: space-between;
+   }
+ 
+   .footer-socials a img {
+     width: 33px;
+     margin: 0;
+     opacity: 1;
+     transition: opacity 0.3s;
+   }
+ 
+   .footer-info > ul {
+     display: flex;
+     justify-content: center;
+     flex-direction: row;
+     width: 100%;
+     gap:50px;
+   }
+ 
+   .footer-info ul li {
+     margin-bottom: 0;
+   }
+ 
+   .footer-info {
+     display: flex;
+     justify-content: center;
+     flex-direction: row;
+     width: 100%;
+   }
+ 
+   .footer-contact {
+     display: flex;
+     gap: 0;
+     margin-left: 0;
+     margin-bottom: 0;
+     justify-content: center;
+     text-align: center;
+   }
+ 
+   .footer-paws {
+     display: none;
+   }
+ 
+   .footer-contact .contact {
+     font-weight: bold;
+     margin-bottom: -0.1rem;
+   }
+ 
+   .footer-contact .contact-item {
+     display: none;
+     align-items: center;
+   }
+ 
+   .footer-contact .num,
+   .footer-contact .adress {
+     margin: 0;
+     font-size: 7px;
+   }
+ 
+   .footer-logo {
+     display: none;
+     left: 0;
+     top: 0%;
+   }
  }
- .footer-socials {
-  display: flex;
-  justify-content: center;
-}
-
-.footer-info{
-  margin:0;
-}
-
-.footer-container{
-  flex-direction: column;
-}
-
-.footer-socials{
-  margin-top: 5%;
-}
-
-.footer-socials a img {
-  width: 33px;
-  margin: 0;
-  opacity: 1;
-  transition: opacity 0.3s;
-}
-
-.footer-socials{
-  width: 50%;
-  justify-content: space-between;
-}
-
-.footer-info > ul{
-  display: flex;
-  justify-content: space-evenly;
-  flex-direction: row;
-  width: 100%;
-}
-
-.footer-info ul li {
-  margin-bottom: 0; /* Augmente l'espacement entre les éléments */
-}
-
-.footer-info{
-  display: flex;
-  justify-content: space-evenly;
-  flex-direction: row;
-  width: 100%;
-}
-
-.footer-contact {
-  display: flex;
-  gap: 0; /* Espacement entre les lignes */
-  margin-left: 0; /* Décalage pour l'alignement */
-  margin-bottom: 0  ; /* Espacement entre les sections */
-}
-
-.footer-paws{
-  display: none;
-}
-
-.footer-contact .contact {
-  font-weight: bold; /* Espacement entre le titre et les items */
-  margin-bottom: -0.1rem;
-}
-.footer-contact .contact-item {
-  display: none;
-  align-items: center; /* Centre verticalement les icônes et le texte */
-}
-.footer-contact .num,
-.footer-contact .adress {
-  margin: 0; /* Supprime les marges par défaut des textes */
-  font-size: 9px; /* Ajuste la taille de la police */
-}
-
-.footer-logo{
-  display: none;
-  left: 0; /* Position fixe du logo à gauche */
-  top: 0%;
-}
- }
+ 

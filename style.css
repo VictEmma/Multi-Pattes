@@ -32,6 +32,7 @@
   padding: 5px 100px;
   margin-bottom: 20px;
   clip-path: polygon(10% 0%, 100% 0%, 90% 100%, 0% 100%);
+  
 }
  .custom-button {
    display: inline-flex;
@@ -139,6 +140,7 @@
   width: 40px;
   height: 40px;
 }
+/* Boutons sur les petits écrans (max-width: 480px) */
 @media screen and (max-width: 480px) {
   .button {
     font-size: 14px; /* Réduction de la taille du texte */
@@ -146,5 +148,17 @@
     padding-left: 50px;
     background-position: 10px center;
     background-size: 25px; /* Ajustement de l'icône */
+  }
+}
+
+/* Titres sur les tablettes (max-width: 768px) */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 36px;
+    margin: 60px auto;
+  }
+
+  h2 {
+    font-size: 20px;
   }
 }
