@@ -106,7 +106,7 @@
         align-items: center;
         justify-content: space-between;
         width: 100%;
-        padding: 20px;
+        padding: 37px;
         position: absolute;
         top: 0;
         left: 0;
@@ -115,6 +115,6 @@
     }
 
     .menu-mobile img {
-        height: 41px; /* Taille du logo */
+        height: 23px; /* Taille du logo */
     }
 }

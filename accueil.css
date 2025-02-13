@@ -39,7 +39,7 @@
 }
  .video-background h1 {
   position: absolute;
-  top: 50%;
+  top: 75%;
   left: 50%;
   transform: translate(-50%, -50%);
   font-size: 85px;
@@ -49,6 +49,7 @@
   font-family: 'Montserrat', sans-serif; /* Choix de police */
   margin: 0;
   padding: 0;
+  width: 856px;
 }
 .start {
   background-color: #FFFBE7;

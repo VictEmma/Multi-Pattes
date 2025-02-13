@@ -114,77 +114,98 @@ body.page-template-les_services {
         }
     }
     
-    /* Responsive : en colonne sur mobile */
-    @media (max-width: 768px) {
-        .bloc {
-            flex-direction: column !important;
-            text-align: center;
-        }
+   /* 🚀 Responsive : passage en colonne sur mobile */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 50px;
     }
-    
-    .park{
-        background-color: #FFFBE7;
-        padding: 62px 180px;
-        .intro {
-            display: flex;
-            flex-direction: column;
-            gap:40px;
-            
-            img{
-                width: 100%;
-                height: 608px;
-                border-radius: 20px;
-            }
-        }
-        .installation {
-            display: flex;
-            gap:40px; 
-            justify-content: center;
-            align-items: center;
-            margin-top: 50px;
-            p {
-                max-width: 490px;
-                text-align: right;
-                margin: 0 auto;
-            }
-            img{
-                width: 534px;
-                height: 388px;
-                border-radius: 20px;
-            }
-        }
-        .contact-me {
-            display: flex;
-            gap:40px; 
-            justify-content: center;
-            align-items: center;
-            margin-top: 50px;
-            p {
-                max-width: 490px;
-                margin: 0 auto;
-            }
-            img{
-                width: 534px;
-                height: 388px;
-                border-radius: 20px;
-            }
-        }
-        .tarif {
-            display: flex;
-            gap:40px; 
-            justify-content: center;
-            align-items: center;
-            margin-top: 50px;
-            p {
-                max-width: 490px;
-                text-align: right;
-                margin: 0 auto;
-            }
-            img{
-                width: 534px;
-                height: 388px;
-                border-radius: 20px;
-            }
-        }
+
+    .bloc {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .bloc img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .end .price-contact {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .park {
+        padding: 50px 20px;
+    }
+}
+
+/* 📌 Section Park */
+.park {
+    background-color: #FFFBE7;
+    padding: 62px 10%;
+}
+
+.park .intro {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.park .intro img {
+    width: 100%;
+    height: auto;
+    max-height: 500px;
+    border-radius: 20px;
+    object-fit: cover;
+}
+
+.park .installation,
+.park .contact-me,
+.park .tarif {
+    display: flex;
+    gap: 40px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+    flex-wrap: wrap;
+}
+
+.park .installation p,
+.park .contact-me p,
+.park .tarif p {
+    max-width: 490px;
+    text-align: right;
+    margin: 0 auto;
+}
+
+.park .installation img,
+.park .contact-me img,
+.park .tarif img {
+    width: 100%;
+    max-width: 534px;
+    height: auto;
+    border-radius: 20px;
+}
+
+/* 📱 Adaptation pour mobile */
+@media (max-width: 768px) {
+    .park .installation,
+    .park .contact-me,
+    .park .tarif {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .park .installation p,
+    .park .contact-me p,
+    .park .tarif p {
+        text-align: center;
+    }
+
+    .park .installation img,
+    .park .contact-me img,
+    .park .tarif img {
+        max-width: 100%;
     }
 }

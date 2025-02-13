@@ -117,7 +117,7 @@ if (!empty($img_pres['url'])) {
     <div class="who-text">
     
       <div class="title">
-        <h2 class="yellow-title">
+        <h2 class="custom-title">
           Qui suis-je ?
         </h2>
       </div>
@@ -133,7 +133,7 @@ if (!empty($img_pres['url'])) {
 </section>
 <section class="services">
   <div class="title">
-    <h2 class="yellow-title">
+    <h2 class="custom-title">
       Services proposés
     </h2>
   </div>
@@ -228,7 +228,7 @@ if (!empty($asv['url'])) {
 </section>
 <section class="end">
     <div class="title">
-        <h2 class="yellow-title">Mes retours clients</h2>
+        <h2 class="custom-title">Mes retours clients</h2>
 
         <?php if (have_rows('carrousel_images')): ?>
             <div class="custom-carousel">

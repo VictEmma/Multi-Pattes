@@ -61,27 +61,27 @@ body.page-template-truffinoscope {
         margin-bottom: 0;
     }
 
-    @media only screen and (max-width: 500px){
-        h1{
-            font-size: 15vw;
+    @media only screen and (max-width: 500px) {
+        h1 {
+            font-size: 36px;
         }
-
+    
         .gallery {
             display: grid;
-            grid-template-columns: repeat(2, 1fr); /* 4 colonnes */
-            gap: 100px 20px; /* 100px entre les lignes, 20px entre les colonnes */
+            grid-template-columns: 1fr; /* Une seule colonne */
+            gap: 20px; /* Espacement entre les éléments */
             width: 100%;
             max-width: 1200px; /* Largeur maximale */
         }
     }
-
-@media only screen and (max-width: 300px){
-    .gallery {
-        display: grid;
-        grid-template-columns: repeat(1, 1fr); /* 4 colonnes */
-        gap: 100px 20px; /* 100px entre les lignes, 20px entre les colonnes */
-        width: 100%;
-        max-width: 1200px; /* Largeur maximale */
+    
+    @media only screen and (max-width: 300px) {
+        .gallery {
+            display: grid;
+            grid-template-columns: 1fr; /* Toujours une seule colonne */
+            gap: 20px; /* Espacement entre les éléments */
+            width: 100%;
+            max-width: 1200px; /* Largeur maximale */
+        }
     }
-}
-}
+}    

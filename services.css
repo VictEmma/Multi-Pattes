@@ -72,3 +72,74 @@ body.page-template-services {
         object-fit: cover; /* Maintient les proportions */
     }
 }
+@media only screen and (max-width: 500px) {
+    body.page-template-services  h1 {
+        font-size: 36px;
+    }
+}
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .about {
+        flex-direction: column;
+        gap: 50px;
+        text-align: center;
+    }
+
+    .first {
+        max-width: 80%;
+        align-items: center;
+    }
+
+    .img {
+        max-width: 80%;
+    }
+
+    .first .button {
+        max-width: 50%;
+    }
+}
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 55px;
+        margin: 80px auto;
+    }
+
+    .first {
+        max-width: 90%;
+    }
+
+    .img {
+        max-width: 90%;
+    }
+
+    .first .button {
+        max-width: 60%;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 40px;
+        margin: 60px auto;
+    }
+
+    .about {
+        padding: 50px 10px;
+        gap: 30px;
+    }
+
+    .first {
+        max-width: 100%;
+        padding: 0 15px;
+    }
+
+    .img {
+        max-width: 100%;
+    }
+
+    .first .button {
+        max-width: 80%;
+        padding: 8px 16px;
+    }
+}

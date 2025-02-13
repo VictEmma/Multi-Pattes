@@ -163,7 +163,13 @@ body.page-template-contact-me-try {
     margin-top: 20px;
     max-width: 50%;
  }
- 
+
+ @media only screen and (max-width: 500px) {
+    body.page-template-contact-me-try h1 {
+        font-size: 36px;
+    }
+}
+
  /* Responsive Design */
 @media (max-width: 1024px) {
     .additional {
@@ -190,6 +196,8 @@ body.page-template-contact-me-try {
 
     .form-group {
         flex-direction: column;
+        padding: 10px;
+        width: 100%;
     }
 
     .ineedflex {
@@ -209,9 +217,5 @@ body.page-template-contact-me-try {
 
     .img-txt .reseaux {
         flex-wrap: wrap;
-    }
-
-    .additional form button {
-        width: 100%;
     }
 }

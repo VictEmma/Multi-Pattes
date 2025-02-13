@@ -1,3 +1,10 @@
+/* Reset global */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
 /* Base styles */
 body.page-template-comment-reserver {
     font-family: 'Montserrat', sans-serif;
@@ -145,12 +152,22 @@ strong, span {
     .dog-image {
         max-width: min(350px, 80vw);
     }
+
+    /* Optimisation pour la taille des titres sur les tablettes */
+    .info-box h2 {
+        font-size: clamp(22px, 4vw, 28px);  /* Taille dynamique pour les titres */
+    }
+
+    /* Améliorer l'espacement entre les sections */
+    .how_to {
+        padding: 30px 20px;
+    }
 }
 
 /* Mobile */
 @media (max-width: 768px) {
     .how_to {
-        padding: 30px 20px;
+        padding: 25px 15px;  /* Ajustement des espacements */
     }
 
     .contact-info {
@@ -167,25 +184,35 @@ strong, span {
     }
 
     .info-box h2 {
-        font-size: 22px;
+        font-size: clamp(20px, 5vw, 26px); /* Taille de titre dynamique */
     }
 
     .dog-image {
         max-width: min(250px, 90vw);
+    }
+
+    /* Optimisation du texte dans les boîtes d'informations */
+    .contact-info p {
+        font-size: clamp(14px, 3vw, 18px);
     }
 }
 
 /* Très petits écrans */
 @media (max-width: 480px) {
     .how_to {
-        padding: 20px 15px;
+        padding: 20px 10px;  /* Espacement encore plus compact */
     }
 
     .info-box h2 {
-        font-size: 20px;
+        font-size: clamp(18px, 5vw, 22px); /* Ajustement pour petites tailles */
     }
 
     .contact-info p {
-        font-size: 14px;
+        font-size: 12px;  /* Réduction de la taille du texte pour une meilleure lisibilité */
+    }
+
+    /* Adapter la taille des images à des écrans encore plus petits */
+    .dog-image {
+        max-width: 85vw;  /* Amélioration de la taille pour les très petits écrans */
     }
 }
