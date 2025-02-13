@@ -15,7 +15,7 @@ body.page-template-contact-me-try {
 
  h2 {
     font-size: 24px;
-    margin-bottom: 20px;
+    margin-bottom: 28px;
  }
  
  .about {
@@ -79,7 +79,7 @@ body.page-template-contact-me-try {
 .img-txt .docs{
     display: flex; /* Centre les icônes */
     flex-direction: column;
-    gap: 20px; /* Espace entre les icônes */
+    gap: 11px; /* Espace entre les icônes */
 }
  .ineedflex {
     display: flex;
