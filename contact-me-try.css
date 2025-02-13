@@ -20,6 +20,10 @@ body.page-template-contact-me-try {
  
  .about {
     padding: 40px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 145px;
     background: #FFFBE7; /* Fond clair */
     border-radius: 8px;
     margin-top: 40px; /* Marge au-dessus de la section */
@@ -37,10 +41,11 @@ body.page-template-contact-me-try {
  .img-txt {
     display: flex;
     justify-content: space-evenly; /*coucou le texte et l'image */
-    gap: 347px;
+    gap: 186px;
     color: #000000;
     align-items: center; /* Aligne l'image et le texte verticalement */
     flex-wrap: wrap; 
+    margin-bottom:130px;
 /* En cas de petit écran, les éléments passent en colonne */
 
  }
@@ -102,11 +107,9 @@ body.page-template-contact-me-try {
 
  .title h2 {
     color: #000000;
-    margin-left: 180px;
     font-size: 28px;
     line-height: 1.8;
     color: #333;
-    margin-top: 100px;
     text-align: center;
  }
 
@@ -134,8 +137,7 @@ body.page-template-contact-me-try {
     gap: 129px;
     align-items: center;
     flex-wrap: wrap;
-    margin-top: 10px;
-    margin-bottom: 100px;
+    margin-top: 100px;
  }
  
  .additional iframe {
