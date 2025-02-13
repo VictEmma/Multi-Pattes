@@ -25,10 +25,13 @@
                   <img src="<?php echo get_template_directory_uri(); ?>/img/sample.png" alt="Carte où me retrouver" width="414" height="426">
                </div>
             <div class="title">
-               <h2 class="where-txt">Où me retrouver ?</h2>
+               
             </div>
          <div class="additional">
+            <div>
+            <h2 class="custom-title">Où me retrouver ?</h2>
             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d22343.25489566852!2d5.567836471909561!3d45.572311540243284!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6354a6efc59d41fd%3A0x39d6bc66817d82ca!2sMultipattes!5e0!3m2!1sen!2sfr!4v1736845489528!5m2!1sen!2sfr" width="414" height="420" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>   
                <p>
                   Je souhaite donner l'opportunité aux maîtres de chiens difficilement acceptés dans une pension classique de partir en vacances sereinement
                   en confiant leurs animaux à un organisme qualifié ou encore de permettre aux animaux d'obtenir une amélioration de leur santé.

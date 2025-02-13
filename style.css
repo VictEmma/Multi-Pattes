@@ -139,3 +139,12 @@
   width: 40px;
   height: 40px;
 }
+@media screen and (max-width: 480px) {
+  .button {
+    font-size: 14px; /* Réduction de la taille du texte */
+    padding: 12px 18px;
+    padding-left: 50px;
+    background-position: 10px center;
+    background-size: 25px; /* Ajustement de l'icône */
+  }
+}

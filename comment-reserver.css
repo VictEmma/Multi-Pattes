@@ -1,3 +1,4 @@
+/* Base styles */
 body.page-template-comment-reserver {
     font-family: 'Montserrat', sans-serif;
     line-height: 1.6;
@@ -5,220 +6,186 @@ body.page-template-comment-reserver {
     background-color: #fff;
     margin: 0;
     padding: 0;
+    overflow-x: hidden;
+}
 
-    h1 {
-        font-size: 85px;
+h1 {
+    font-size: clamp(40px, 8vw, 85px);
+    text-align: center;
+    color: #000000;
+    margin: clamp(40px, 8vh, 120px) auto;
+    font-weight: 700;
+    padding: 0 20px;
+}
+
+strong, span {
+    font-weight: 700;
+}
+
+.how_to {
+    background: #FFFBE7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: clamp(30px, 5vw, 50px) clamp(20px, 8vw, 100px);
+    gap: clamp(10px, 2vw, 20px);
+    flex-direction: column;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.content-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: clamp(40px, 5vw, 138px);
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 clamp(15px, 3vw, 47px);
+    box-sizing: border-box;
+}
+
+.contact-info {
+    display: flex;
+    align-items: center;
+    gap: clamp(10px, 2vw, 20px);
+    flex-wrap: wrap;
+}
+
+.contact-info p {
+    font-size: clamp(14px, 1.2vw, 16px);
+    max-width: 520px;
+    margin: 0;
+}
+
+.phone-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.phone-info .icon {
+    width: 20px;
+    height: 20px;
+    flex-shrink: 0;
+}
+
+.button {
+    transition: background-color 0.3s ease;
+}
+
+.button:hover {
+    background-color: #ffee00b3;
+}
+
+.info-section {
+    flex: 2;
+    font-size: clamp(14px, 1.2vw, 16px);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.info-box {
+    padding: clamp(15px, 2vw, 20px);
+    border-radius: 14px;
+    margin-bottom: clamp(15px, 2vw, 20px);
+    text-align: center;
+    width: 100%;
+}
+
+.info-box h2 {
+    background-color: #FFED00;
+    font-size: clamp(20px, 2.5vw, 28px);
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 7px;
+}
+
+.dog-image {
+    width: 100%;
+    max-width: 409px;
+    height: auto;
+    border-radius: 20px;
+    object-fit: cover;
+}
+
+/* Tablettes */
+@media (max-width: 1024px) {
+    .content-wrapper {
+        flex-direction: column;
+        align-items: center;
+        gap: clamp(20px, 4vw, 40px);
+    }
+
+    .contact-info {
+        justify-content: center;
         text-align: center;
-        color: #000000;
-        margin: 120px auto 120px;
-        font-weight: 700;
+        width: 100%;
     }
 
-    strong {
-        font-weight: 700;
-    }
-
-    span {
-        font-weight: 700;
-    }
-    
-    .contact-section {
-        background: #FFFBE7;
+    .image-section {
+        order: -1;
+        width: 100%;
         display: flex;
         justify-content: center;
-        align-items: flex-end;
-        padding: 50px 100px;
-        gap: 20px;
-        flex-direction: column;
     }
 
-    .content-wrapper {
-        display: flex;
-        flex-wrap: wrap; /* Permet d'adapter les éléments */
-        justify-content: space-between;
-        gap: 138px;
-        width: 100%;
-        padding-right: 47px;
-    }
-    
-    .contact-info {
-        flex: 1;
-        font-size: 16px;
-        margin: 123px -12px 123px 0px;
-    }
-    
-    .contact-info p {
-        margin-left: -1035px;
-        position: absolute;
-        margin-bottom: 20px;
-        font-size: 16px;
-        justify-content: flex-start;
-    }
-    
-    .phone-info {
-        display: flex;
-        align-items: center;
-        gap: 10px;
-        margin-bottom: 20px;
-        margin-left: -65px;
-    }
-    
-    .phone-info .icon {
-        width: 20px;
-        height: 20px;
-    }
-    
-    .button {
-        display: inline-block;
-        background-color: #FFED00;
-        color: #000000;
-        text-decoration: none;
-        font-weight: bold;
-        border-radius: 14px;
-        text-align: center;
-        transition: background-color 0.3s ease;
-        font-size: 16px;
-        position: relative;
-        left: -50px;
-    }
-    
-    .button:hover {
-        background-color: #ffee00b3;
-    }
-    
     .info-section {
-        flex: 2;
-        font-size: 16px;
-        text-align: center;
+        order: 1;
     }
-    
-    .info-box {
-        padding: 20px;
-        border-radius: 14px;
-        margin-bottom: 20px;
-        text-align: center;
-        font-size: 16px;
-    }
-    
-    .info-box h2 {
-        background-color: #FFED00;
-        font-size: 28px;
-        margin-bottom: 10px;
-        font-size: 28px;
-    }
-    
-    .info-section {
-        display: flex;
-        flex-direction: column;
-        align-items: center; /* Centre horizontalement le contenu */
-    }
-    
-    .info-section .button {
-        margin-top: 123px; /* Ajoute un espace de 123px par rapport au contenu au-dessus */
-        margin-bottom: 123px; /* Ajoute un espace de 123px avant le footer */
-        align-self: center; /* Centre le bouton horizontalement */
-    }  
-    
+
     .dog-image {
-        max-width: 409px;
-        height: 488px;
-        border-radius: 20px;
+        max-width: min(350px, 80vw);
     }
-    
-    @media (max-width: 1024px) {
-        .contact-section {
-            flex-direction: column !important; /* Les éléments passent en colonne */
-            align-items: center !important;
-            padding: 20px !important;
-        }
-    
-        .content-wrapper {
-            display: flex;
-            flex-direction: column !important; /* Change l'agencement en colonne */
-            align-items: center !important; /* Centre les éléments horizontalement */
-            gap: 40px !important; /* Réduit l'espace entre les sections */
-            padding: 0 !important;
-        }
+}
 
-        .image-section {
-            order: 0 !important; /* Place l'image après le texte */
-            margin-top: 20px !important; 
-            width: 100% !important; /* S'adapte à la largeur disponible */
-            display: flex !important; /* S'assure que l'image est bien affichée */
-            justify-content: center !important;/* Ajoute un espacement au-dessus */
-        }
-    
-        .contact-info {
-            margin: 0 !important;
-            text-align: center !important; /* Centre le texte */
-        }
-    
-        .contact-info p {
-            position: static !important; /* Réinitialise la position */
-            margin: 0 0 20px !important; /* Ajoute un espacement cohérent */
-        }
-    
-        .phone-info {
-            margin-left: 0 !important; /* Supprime le décalage */
-            justify-content: center !important; /* Centre horizontalement */
-        }
-    
-        .button {
-            position: static !important; /* Réinitialise la position */
-            left: 0 !important; /* Supprime le décalage */
-            margin: 20px auto !important; /* Centre le bouton */
-        }
-    
-        .info-section {
-            align-items: center !important; /* Centre le contenu */
-            text-align: center !important; 
-            order: 1 !important;/* Aligne le texte au centre */
-        }
-    
-        .info-box {
-            padding: 10px !important;
-        }
-
-        .info-box h2 {
-            order: 0 !important; /* Place le <h2> en premier */
-        }        
-    
-        .dog-image {
-            width: auto !important; /* Adapte la taille de l'image */
-            max-width: 300px !important;
-            height: auto !important; /* Respecte le ratio de l'image */
-            margin: 20px 0 !important; /* Ajoute un espacement autour de l'image */
-        }
+/* Mobile */
+@media (max-width: 768px) {
+    .how_to {
+        padding: 30px 20px;
     }
-    
-    @media (max-width: 768px) {
-        h1 {
-            font-size: 40px !important; /* Adapte la taille du titre */
-            margin: 40px auto !important; /* Réduit les marges */
-        }
 
-        .content-wrapper {
-            flex-direction: column !important; /* Empile toujours en colonne */
-        }
-    
-        .image-section {
-            order: 0 !important;
-        }    
-    
-        .info-section {
-            margin-bottom: 40px !important;
-            order: 1 !important;
-        }
-
-        .info-box h2 {
-            order: 0 !important; /* Place le <h2> en premier */
-        }  
-    
-        .dog-image {
-            width: 100% !important;
-            max-width: 250px !important; /* Réduit encore l'image pour les très petits écrans */
-        }
+    .contact-info {
+        flex-direction: column;
     }
-    
-    
+
+    .phone-info {
+        width: 100%;
+        margin: 20px 0;
+    }
+
+    .info-box {
+        padding: 15px;
+    }
+
+    .info-box h2 {
+        font-size: 22px;
+    }
+
+    .dog-image {
+        max-width: min(250px, 90vw);
+    }
+}
+
+/* Très petits écrans */
+@media (max-width: 480px) {
+    .how_to {
+        padding: 20px 15px;
+    }
+
+    .info-box h2 {
+        font-size: 20px;
+    }
+
+    .contact-info p {
+        font-size: 14px;
+    }
 }

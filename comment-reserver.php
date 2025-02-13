@@ -1,21 +1,23 @@
 <?php /* Template Name: Comment réserver ? */ ?>
 <?php get_header(); ?>
 <h1>Comment réserver ?</h1>
-<section class="contact-section">
+<section class="how_to">
     <div class="contact-info">
-        <p>Pour profiter de mes services, n'hésitez pas à me contacter par mail ou par<br>téléphone !</p>
+        <p>Pour profiter de mes services, n'hésitez pas à me contacter par mail ou par téléphone !</p>
         <div class="phone-info">
-            <img src="<?php echo get_template_directory_uri(); ?>/img/black-phone.png" alt="Phone Icon" class="icon">
-            <span>+33 6 87 20 03 32</span>
+            <div>
+                <img src="<?php echo get_template_directory_uri(); ?>/img/black-phone.png" alt="Phone Icon" class="icon">
+                <span>+33 6 87 20 03 32</span>
+            </div>
+            <a href="tel:+33687200332" class="button">Me contacter !</a>
         </div>
-        <a href="tel:+33687200332" class="button">Me contacter !</a>
     </div>
     
     <div class="content-wrapper">
         <div class="info-section">
             <div class="info-box">
                 <div class="title">
-                <h2>À savoir</h2>
+                <h2 class="custom-title ">À savoir</h2>
                 </div>
                 <p>Vous souhaitez pouvoir vous occuper d'un chien catégorisé ?<br>
                     C'est possible à l'aide de la <strong>formation CESCCAM</strong>, que je peux<br>vous faire passer. 
@@ -25,8 +27,8 @@
                     <strong>devis personnalisé</strong> en fonction du<br>profil de l'animal.
                 </p>
                 <p>Pour réserver le <strong>parc</strong>, veuillez <strong>me contacter par mail</strong> ou par <br><strong>appel téléphonique</strong> pour convenir d'une date.</p>
+                <a href="mailto:example@email.com" class="button">Me contacter !</a>
             </div>
-            <a href="mailto:example@email.com" class="button">Me contacter !</a>
         </div>
     <div class="image-section">
         <img src="<?php echo get_template_directory_uri(); ?>/img/sample.png" alt="Chien" class="dog-image">
