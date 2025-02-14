@@ -10,6 +10,7 @@
 </head>
 <body>
    <h1>Qui suis-je ?</h1>
+   <img src="<?php echo get_template_directory_uri(); ?>/img/wave.svg" alt="Motif patte" class="wave"/>
       <section class="about">
                <h2 class="intro-text">
                   Je m'appelle <strong>Fabienne Guinet</strong>, et je suis une <strong>passionnée de chiens</strong> depuis toujours.
