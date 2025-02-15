@@ -137,88 +137,88 @@ if (!empty($img_pres['url'])) {
       Services proposés
     </h2>
   </div>
-<div class="grid-container">
+  <div class="grid-container">
   <div class="item item1">
   <?php 
-// Récupérer le champ ACF 'img_pres'
-$img_guard = get_field('img_gard_patho');
+  $img_guard = get_field('img_gard_patho');
+  $lien_guard = get_field('lien_gard_patho');
 
-// Vérifier si le tableau contient une clé 'url'
-if (!empty($img_guard['url'])) {
-    // Afficher l'image avec l'URL récupérée
-    echo '<img src="' . esc_url($img_guard['url']) . '" alt="Image Illustration">';
-} else {
-    // Message en cas d'absence d'URL
-    echo 'Aucune image de présentation disponible.';
-}
-?>
+  if (!empty($img_guard['url'])) {
+      echo !empty($lien_guard) ? '<a href="' . esc_url($lien_guard) . '" target="_blank">' : '';
+      echo '<img src="' . esc_url($img_guard['url']) . '" alt="Image Illustration">';
+      echo !empty($lien_guard) ? '</a>' : '';
+  } else {
+      echo 'Aucune image de présentation disponible.';
+  }
+  ?>
     <div class="item-text">Garde de chien pathologique</div>
   </div>
+
   <div class="item item2">
   <?php 
-// Récupérer le champ ACF 'img_pres'
-$img_park = get_field('img_park_canin');
+  $img_park = get_field('img_park_canin');
+  $lien_park = get_field('lien_park_canin');
 
-// Vérifier si le tableau contient une clé 'url'
-if (!empty($img_park['url'])) {
-    // Afficher l'image avec l'URL récupérée
-    echo '<img src="' . esc_url($img_park['url']) . '" alt="Image Illustration">';
-} else {
-    // Message en cas d'absence d'URL
-    echo 'Aucune image de présentation disponible.';
-}
-?>
+  if (!empty($img_park['url'])) {
+      echo !empty($lien_park) ? '<a href="' . esc_url($lien_park) . '" target="_blank">' : '';
+      echo '<img src="' . esc_url($img_park['url']) . '" alt="Image Illustration">';
+      echo !empty($lien_park) ? '</a>' : '';
+  } else {
+      echo 'Aucune image de présentation disponible.';
+  }
+  ?>
     <div class="item-text">Parc de jeu canin</div>
   </div>
+
   <div class="item item3">
   <?php 
-// Récupérer le champ ACF 'img_pres'
-$img_dipl = get_field('img_diplom');
+  $img_dipl = get_field('img_diplom');
+  $lien_dipl = get_field('lien_diplom');
 
-// Vérifier si le tableau contient une clé 'url'
-if (!empty($img_dipl['url'])) {
-    // Afficher l'image avec l'URL récupérée
-    echo '<img src="' . esc_url($img_dipl['url']) . '" alt="Image Illustration">';
-} else {
-    // Message en cas d'absence d'URL
-    echo 'Aucune image de présentation disponible.';
-}
-?>
+  if (!empty($img_dipl['url'])) {
+      echo !empty($lien_dipl) ? '<a href="' . esc_url($lien_dipl) . '" target="_blank">' : '';
+      echo '<img src="' . esc_url($img_dipl['url']) . '" alt="Image Illustration">';
+      echo !empty($lien_dipl) ? '</a>' : '';
+  } else {
+      echo 'Aucune image de présentation disponible.';
+  }
+  ?>
     <div class="item-text">Diplôme CESCCAM</div>
   </div>
+
   <div class="item item4">
   <?php 
-// Récupérer le champ ACF 'img_pres'
-$img_phy = get_field('img_pre_phy');
+  $img_phy = get_field('img_pre_phy');
+  $lien_phy = get_field('lien_pre_phy');
 
-// Vérifier si le tableau contient une clé 'url'
-if (!empty($img_phy['url'])) {
-    // Afficher l'image avec l'URL récupérée
-    echo '<img src="' . esc_url($img_phy['url']) . '" alt="Image Illustration">';
-} else {
-    // Message en cas d'absence d'URL
-    echo 'Aucune image de présentation disponible.';
-}
-?>
+  if (!empty($img_phy['url'])) {
+      echo !empty($lien_phy) ? '<a href="' . esc_url($lien_phy) . '" target="_blank">' : '';
+      echo '<img src="' . esc_url($img_phy['url']) . '" alt="Image Illustration">';
+      echo !empty($lien_phy) ? '</a>' : '';
+  } else {
+      echo 'Aucune image de présentation disponible.';
+  }
+  ?>
     <div class="item-text">Préparation physique</div>
   </div>
+
   <div class="item item5">
   <?php 
-// Récupérer le champ ACF 'img_pres'
-$asv = get_field('img_asv');
+  $asv = get_field('img_asv');
+  $lien_asv = get_field('lien_asv');
 
-// Vérifier si le tableau contient une clé 'url'
-if (!empty($asv['url'])) {
-    // Afficher l'image avec l'URL récupérée
-    echo '<img src="' . esc_url($asv['url']) . '" alt="Image Illustration">';
-} else {
-    // Message en cas d'absence d'URL
-    echo 'Aucune image de présentation disponible.';
-}
-?>
+  if (!empty($asv['url'])) {
+      echo !empty($lien_asv) ? '<a href="' . esc_url($lien_asv) . '" target="_blank">' : '';
+      echo '<img src="' . esc_url($asv['url']) . '" alt="Image Illustration">';
+      echo !empty($lien_asv) ? '</a>' : '';
+  } else {
+      echo 'Aucune image de présentation disponible.';
+  }
+  ?>
     <div class="item-text">Remplacement de poste ASV</div>
   </div>
 </div>
+
 <div class="button-container">
 <?php $services=get_field('tous_les_services');
       ?>
@@ -229,7 +229,7 @@ if (!empty($asv['url'])) {
 <section class="end">
     <div class="title">
         <h2 class="custom-title">Mes retours clients</h2>
-
+    </div>
         <?php if (have_rows('carrousel_images')): ?>
             <div class="custom-carousel">
                 <div class="carousel-container">
@@ -262,7 +262,6 @@ if (!empty($asv['url'])) {
                 var carouselImages = <?php echo json_encode($images); ?>;
             </script>
         <?php endif; ?>
-    </div>
 </section>
 <script>
 document.addEventListener("DOMContentLoaded", function () {

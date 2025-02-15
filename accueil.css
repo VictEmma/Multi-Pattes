@@ -93,6 +93,7 @@
     p {
       text-align: center;
       width: 452px;
+      line-height: 150%;
     }
     img {
       width: 446px;
@@ -117,6 +118,9 @@
   width: 1060px; /* Largeur de l'élément */
   height: 597px;
   aspect-ratio: 16/9; /* Maintient un ratio vidéo classique */
+}
+.services {
+  margin-bottom: 100px;
 }
 .services .title{
   display:flex;
@@ -168,6 +172,16 @@
   padding: 5px 10px;
   border-radius: 4px;
 }
+/* Effet hover : zoom léger + ombre */
+.services .grid-container .item a img {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.services .grid-container .item a:hover img {
+  transform: scale(1.05); /* Zoom léger */
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3); /* Ombre */
+}
+
 
 /* Placement des éléments dans la grille */
 .services .grid-container .item1 {
@@ -188,6 +202,15 @@
 
 .services .grid-container .item5 {
   grid-area: 3 / 4 / 4 / 6;
+}
+.end {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap:46px;
+  flex-direction: column;
+  padding: 100px 0;
+  background-color: #FFFBE7;
 }
 .end .title{
   display:flex;

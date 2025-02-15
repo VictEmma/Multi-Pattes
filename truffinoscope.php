@@ -5,7 +5,7 @@
 
 <section class="about">
     <div class="coucou">
-        <h2>Qu'est-ce que c'est ?</h2>
+        <h2 class="custom-title">Qu'est-ce que c'est ?</h2>
     </div>
     <p><?php 
     $introduction = get_field('introduction'); 
