@@ -1,5 +1,7 @@
 <?php /* Template Name: acceuil */ ?>
 <?php get_header(); ?>
+<title>Accueil</title>
+</head>
     <div class="ticker-wrapper">
   <div class="ticker">
     <img src="<?php echo get_template_directory_uri(); ?>/img/Patounne.svg" alt="Motif patte" class="separator" />

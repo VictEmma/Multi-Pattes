@@ -104,7 +104,7 @@ h1 {
 
 #carousel-image {
   width: 600px !important; /* Largeur fixe */
-  height: 400px !important; /* Hauteur fixe */
+  height: auto !important; /* Hauteur fixe */
   object-fit: cover !important; /* S'assure que l’image remplit le cadre sans être déformée */
   border-radius: 10px;
 }

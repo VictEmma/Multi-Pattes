@@ -32,18 +32,43 @@
                 <div class="title">
                     <h2 class="custom-title">Sur les réseaux</h2>
                 <div class="reseaux">
-                    <a href="https://www.facebook.com/p/Multi-pattes-100085392571223/"><img src="<?php echo get_template_directory_uri(); ?>/img/fb-logo.png" alt="Réseaux sociaux" ></a>
-                    <a href="https://www.instagram.com/multipattes38/"><img src="<?php echo get_template_directory_uri(); ?>/img/ig-color.png" alt="Réseaux sociaux"></a>
-                    <a href="lien.com"><img src="<?php echo get_template_directory_uri(); ?>/img/tiktok-color.png" alt="Réseaux sociaux" ></a>
+                                <?php 
+                    $facebook = get_field('facebook_link');
+                    $instagram = get_field('instagram_link');
+                    $tiktok = get_field('tiktok_link');
+
+                    if (!empty($facebook['url'])) : ?>
+                        <a href="<?php echo esc_url($facebook['url']); ?>" target="_blank" rel="noopener noreferrer">
+                            <img src="<?php echo get_template_directory_uri(); ?>/img/fb-logo.png" alt="Facebook">
+                        </a>
+                    <?php endif; ?>
+
+                    <?php if (!empty($instagram['url'])) : ?>
+                        <a href="<?php echo esc_url($instagram['url']); ?>" target="_blank" rel="noopener noreferrer">
+                            <img src="<?php echo get_template_directory_uri(); ?>/img/ig-color.png" alt="Instagram">
+                        </a>
+                    <?php endif; ?>
+
+                    <?php if (!empty($tiktok['url'])) : ?>
+                        <a href="<?php echo esc_url($tiktok['url']); ?>" target="_blank" rel="noopener noreferrer">
+                            <img src="<?php echo get_template_directory_uri(); ?>/img/tiktok-color.png" alt="TikTok">
+                        </a>
+                    <?php endif; ?>
                 </div>
                 </div>
-                <div class="title2">
-                    <h2 class="custom-title">Documents</h2>
-                    <div class="docs">
-                        <a href="document.pdf"><img src="<?php echo get_template_directory_uri(); ?>/img/file.png" alt="Réseaux sociaux" class="img-docs"></a>
-                        <p class="type-docs">Contrat de Garde</p>
+                    <div class="title2">
+                        <h2 class="custom-title">Documents</h2>
+                        <?php 
+                        $document = get_field('document');
+                        if (!empty($document['url'])) : ?>
+                            <div class="docs">
+                    <a href="<?php echo esc_url($document['url']); ?>" target="_blank">
+                        <img src="<?php echo get_template_directory_uri(); ?>/img/file.png" alt="Document" class="img-docs">
+                    </a>
+                    <p class="type-docs">Contrat de Garde</p>
                     </div>
-                </div>
+                    <?php endif; ?>
+                </div>           
             </div>
       </section>
 </body>

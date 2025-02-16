@@ -43,26 +43,26 @@ body.page-template-les_services {
     
     .bloc {
         display: flex;
-        align-items: center; /* Centre verticalement */
-        gap: 40px; /* Espace entre texte et image */
+        align-items: center; 
+        gap: 40px;
         width: 100%;
-        max-width: 900px;
-        justify-content: space-between; /* Assure un bon équilibrage entre texte et image */
-        flex-wrap: wrap; /* Permet une bonne adaptation sur mobile */
+        max-width: 1064px;
+        justify-content: space-between;
+    }
+    
+    .bloc-texte {
+        flex: 1;
+        font-size: 18px;
+        text-align: justify;
     }
     
     .bloc img {
-        max-width: 300px; /* Taille d'image ajustable */
+        max-width: 300px;
         height: auto;
         border-radius: 10px;
         flex-shrink: 0; /* Empêche l’image de rétrécir */
     }
     
-    .bloc-texte {
-        flex: 1; /* Prend tout l'espace restant */
-        font-size: 18px;
-        text-align: justify;
-    }
     
     /* Corrige les styles des listes générées par le WYSIWYG */
     .bloc-texte ul, .bloc-texte ol {
@@ -90,20 +90,23 @@ body.page-template-les_services {
     }
     
     .end-text {
-        text-align: center; /* Centre juste le texte */
+        text-align: left;
+        max-width: 1064px;
     }
     
     .end .price-contact {
         display: flex;
+        flex-direction: row; /* ✅ Par défaut, en ligne */
         justify-content: center;
         align-items: center;
         gap: 40px;
-        .price {
-            font-size: 36px; /* Ajoute "px" sinon ça ne marchera pas */
-            font-weight: bold;
-            color: black; /* Optionnel : adapte la couleur du texte */
-            text-shadow: 3px 3px 0 #FFED00; /* Ombre jaune */
-        }
+    }
+    
+    .end .price-contact .price { 
+        font-size: 36px;
+        font-weight: bold;
+        color: black;
+        text-shadow: 3px 3px 0 #FFED00;
     }
     
    /* 🚀 Responsive : passage en colonne sur mobile */
@@ -122,6 +125,12 @@ body.page-template-les_services {
         height: auto;
     }
 
+    .bloc-texte {
+        width: 100%;
+        text-align: center;
+    }
+}
+
     .end .price-contact {
         flex-direction: column;
         gap: 20px;
@@ -130,7 +139,6 @@ body.page-template-les_services {
     .park {
         padding: 50px 20px;
     }
-}
 
 /* 📌 Section Park */
 .park {

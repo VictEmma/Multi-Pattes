@@ -1,10 +1,12 @@
 <?php /* Template Name: TOUS LES SERVICES */ ?>
 <?php get_header(); ?>
+<title><?php echo get_field('nom_du_service'); ?></title>
+</head>
 <h1>
     <?php echo get_field('nom_du_service'); ?> 
 </h1>
 <section class="principal">
-    <?php 
+    <?php
     $intro = get_field('introduction');
     if ($intro) {
         echo '<h2 class="intro">' . wp_kses_post($intro) . '</h2>'; 
