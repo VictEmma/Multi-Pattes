@@ -1,4 +1,4 @@
-<?php /* Template Name: Essai */ ?>
+<?php /* Template Name: Me contacter */ ?>
 <?php get_header(); ?>
    <title>Me contacter</title>
 </head>
@@ -17,7 +17,7 @@
                 <h2 class="custom-title">Me contacter</h2>
                 <div class="ineedflex">
                     <img src="<?php echo get_template_directory_uri(); ?>/img/black-phone.png" alt="phone" width="25" height="25">
-                    <p>+33 6 87 20 03 32</p>
+                    <?php echo get_field('phone_number'); ?>
             </div>
                         <div class="form-group">
                             <input type="text" placeholder="Nom" required>
