@@ -102,7 +102,7 @@ body.page-template-les_services {
         gap: 40px;
     }
     
-    .end .price-contact .price { 
+    .end .price-contact .price p { 
         font-size: 36px;
         font-weight: bold;
         color: black;
@@ -129,7 +129,6 @@ body.page-template-les_services {
         width: 100%;
         text-align: center;
     }
-}
 
     .end .price-contact {
         flex-direction: column;
@@ -187,7 +186,7 @@ body.page-template-les_services {
     height: auto;
     border-radius: 20px;
 }
-
+}
 /* 📱 Adaptation pour mobile */
 @media (max-width: 768px) {
     .park .installation,

@@ -35,9 +35,10 @@
     <?php echo get_field('text'); ?>
     </p>
     <div class ="price-contact">
-        <p class="price">
-        <?php echo get_field('price'); ?>
-        </p>
+        <div class="price <?php echo esc_attr(get_field('price') ? 'has-price' : 'no-price'); ?>">
+    <?php echo get_field('price'); ?>
+</div>
+
         <?php $monlien=get_field('contact-me');?>
         <a class="button" href="<?php echo $monlien['url'] ?>" > <?php echo $monlien['title'] ?></a>
     </div>
