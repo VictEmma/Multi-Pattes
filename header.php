@@ -37,7 +37,8 @@
       <ul>
         <li><a href="#">A propos</a></li>
         <li><a href="#">Nos services</a></li>
-        <li><a href="#">Témoignages</a></li>
+        <li><a href="#">Comment réserver ?</a></li>
+        <li><a href="#">Truffinoscope</a></li>
         <li><a href="#">Contact</a></li>
       </ul>
     </div>

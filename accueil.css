@@ -30,16 +30,17 @@
     margin: 0 15px; /* Espacement autour du SVG */
     vertical-align: middle; /* Aligne le SVG avec le texte */
   }
-   .video-background {
+.video-background {
     video {
         width: 100%;
         height: auto;
         filter: brightness(0.5) grayscale(0.8) contrast(1.2);
     }
+    position: relative;
 }
  .video-background h1 {
   position: absolute;
-  top: 75%;
+  top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   font-size: 85px;
@@ -50,6 +51,41 @@
   margin: 0;
   padding: 0;
   width: 856px;
+}
+/* Style du bouton circulaire */
+.circle-button {
+  position: absolute;
+  top: 20%; /* Ajuste cette valeur pour positionner le bouton verticalement */
+  right: 10%; /* Ajuste cette valeur pour positionner le bouton horizontalement */
+  transform: translateY(-50%) rotate(90deg);
+  width: 143px; /* Taille du bouton circulaire */
+  height: 143px;
+  border-radius: 50%; /* Cercle parfait */
+  background-color: #FFED00;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  z-index: 3; /* Le bouton sera au-dessus de la vidéo */
+}
+
+.circle-button:hover {
+  background-color: #000000;
+  transform: translateY(-50%) rotate(90deg) scale(1.1);
+  .button-text{
+    color:#FFED00;
+  }
+}
+/* Style du texte à l'intérieur du bouton */
+.button-text {
+  font-size: 16px; /* Ajuste la taille du texte */
+  color: black;
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+  transform: rotate(-60deg); /* Rotation pour que le texte soit vertical */
+  white-space: nowrap; /* Éviter les retours à la ligne */
 }
 .start {
   background-color: #FFFBE7;
@@ -227,3 +263,105 @@
       transform: translateX(-50%);
     }
   }
+ /* Responsive */
+@media (max-width: 1200px) {
+  .services .grid-container {
+    padding: 54px 60px;
+  }
+}
+
+@media (max-width: 768px) {
+  .circle-button{
+    display: none;
+  }
+  /* Mobile adjustments */
+  .services .grid-container {
+    grid-template-columns: 1fr; /* 1 seule colonne */
+    padding: 20px;
+  }
+
+  .services .grid-container .item {
+    height: 250px; /* Augmenter la taille des rectangles */
+    margin-bottom: 20px; /* Espacement entre les éléments */
+  }
+
+  .services .grid-container .item1,
+  .services .grid-container .item2,
+  .services .grid-container .item3,
+  .services .grid-container .item4,
+  .services .grid-container .item5 {
+    grid-area: unset;
+  }
+  .ticker-wrapper{
+    display: none;
+  }
+  .end .title{
+    padding:22px;
+  }
+  .start .bienvenue {
+    padding: 20px;
+  }
+
+  .start .bienvenue .t-photo {
+    flex-direction: column; /* Empiler les éléments en colonne */
+    gap: 20px;
+  }
+  .start .bienvenue .t-photo img {
+    width: 200px;
+    height: auto;
+  }
+  .start .who-is img {
+    width: 191px;
+    height: 221px;
+  }
+  .start .who-is {
+    flex-direction: column; /* Alignement vertical des éléments */
+    gap: 20px;
+  }
+  .start .who-is .who-text p {
+    max-width: 307px;
+    text-align: center; /* Centre le texte à l'intérieur de l'élément */
+    margin-left: auto; /* Centrage horizontal avec les marges automatiques */
+    margin-right: auto; /* Centrage horizontal avec les marges automatiques */
+  }
+  .start .youtube-video iframe {
+    width: 100%; /* Réduire la largeur pour les écrans mobiles */
+    height: auto; /* Ajuster la hauteur */
+
+  }
+  .services .grid-container .item img,
+  .start .youtube-video iframe {
+    max-width: 100%; /* Empêche l'élément de dépasser la largeur de son conteneur */
+  }
+  .video-background{
+    margin-top: 100px;
+  }
+  .video-background h1 {
+    font-size: 40px; /* Réduire la taille du texte */
+    width: 80%; /* Réduire la largeur */
+    margin-top: 100px;
+  }
+  .end {
+    padding: 50px 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .video-background h1 {
+    font-size: 36px;
+    width: 369px;
+    position: absolute;  /* Garder le positionnement absolu */
+    top: 20%;  /* Positionner en haut de la page */
+    left: 50%;  /* Garder le texte centré horizontalement */
+    transform: translateX(-50%);  /* Appliquer un décalage horizontal pour le centrage */
+    margin: 0;
+  }
+
+  .services .grid-container .item {
+    height: 200px; /* Ajuster la hauteur des éléments */
+  }
+
+  .services .grid-container .item-text {
+    padding: 5px 10px; /* Réduire le padding */
+  }
+}

@@ -166,3 +166,43 @@ h1 {
     font-size: 20px;
   }
 }
+@media (max-width: 768px) {
+  .carousel-container {
+    width: 390px; /* Largeur du carousel définie sur 390px pour les tablettes et petits écrans */
+    max-width: 390px; /* Limite la largeur pour s'assurer que le carousel ne dépasse pas 390px */
+    height: 300px; /* Ajuste la hauteur pour les écrans moyens */
+  }
+
+  #carousel-image {
+    width: 100%; /* L'image prend toute la largeur */
+    height: auto;
+  }
+
+  .carousel-button-prev, .carousel-button-next {
+    padding: 8px; /* Réduit la taille des boutons sur les petits écrans */
+  }
+
+  .carousel-button-prev img,
+  .carousel-button-next img {
+    width: 30px; /* Réduit la taille des flèches */
+    height: 30px; /* Réduit la taille des flèches */
+  }
+}
+
+@media (max-width: 480px) {
+  .carousel-container {
+    width: 390px; /* Sur les petits écrans, le carousel a une largeur fixe de 390px */
+    max-width: 390px; /* Assure que la largeur ne dépasse pas 390px */
+    height: 200px; /* Ajuste la hauteur pour les petits écrans */
+  }
+
+  .carousel-button-prev, .carousel-button-next {
+    padding: 5px; /* Plus petits boutons sur les mobiles */
+  }
+
+  .carousel-button-prev img,
+  .carousel-button-next img {
+    width: 25px; /* Flèches encore plus petites */
+    height: 25px; /* Flèches encore plus petites */
+  }
+}

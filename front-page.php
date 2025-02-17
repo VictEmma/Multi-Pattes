@@ -33,6 +33,9 @@
         Votre navigateur ne supporte pas la lecture de cette vidéo.
     </video>
         <h1><?php echo get_field('text_video'); ?></h1>
+    <div class="circle-button">
+        <span class="button-text">Truffinoscope</span>
+    </div>
 </div>
 <section class="start">
   <div class="bienvenue">
@@ -139,11 +142,12 @@ if (!empty($img_pres['url'])) {
       Services proposés
     </h2>
   </div>
-  <div class="grid-container">
+  <div class="grid-container"> 
   <div class="item item1">
   <?php 
   $img_guard = get_field('img_gard_patho');
   $lien_guard = get_field('lien_gard_patho');
+  $lien_guard = is_array($lien_guard) ? $lien_guard['url'] ?? '' : $lien_guard;
 
   if (!empty($img_guard['url'])) {
       echo !empty($lien_guard) ? '<a href="' . esc_url($lien_guard) . '" target="_blank">' : '';
@@ -160,6 +164,7 @@ if (!empty($img_pres['url'])) {
   <?php 
   $img_park = get_field('img_park_canin');
   $lien_park = get_field('lien_park_canin');
+  $lien_park = is_array($lien_park) ? $lien_park['url'] ?? '' : $lien_park;
 
   if (!empty($img_park['url'])) {
       echo !empty($lien_park) ? '<a href="' . esc_url($lien_park) . '" target="_blank">' : '';
@@ -176,6 +181,7 @@ if (!empty($img_pres['url'])) {
   <?php 
   $img_dipl = get_field('img_diplom');
   $lien_dipl = get_field('lien_diplom');
+  $lien_dipl = is_array($lien_dipl) ? $lien_dipl['url'] ?? '' : $lien_dipl;
 
   if (!empty($img_dipl['url'])) {
       echo !empty($lien_dipl) ? '<a href="' . esc_url($lien_dipl) . '" target="_blank">' : '';
@@ -192,6 +198,7 @@ if (!empty($img_pres['url'])) {
   <?php 
   $img_phy = get_field('img_pre_phy');
   $lien_phy = get_field('lien_pre_phy');
+  $lien_phy = is_array($lien_phy) ? $lien_phy['url'] ?? '' : $lien_phy;
 
   if (!empty($img_phy['url'])) {
       echo !empty($lien_phy) ? '<a href="' . esc_url($lien_phy) . '" target="_blank">' : '';
@@ -208,6 +215,7 @@ if (!empty($img_pres['url'])) {
   <?php 
   $asv = get_field('img_asv');
   $lien_asv = get_field('lien_asv');
+  $lien_asv = is_array($lien_asv) ? $lien_asv['url'] ?? '' : $lien_asv;
 
   if (!empty($asv['url'])) {
       echo !empty($lien_asv) ? '<a href="' . esc_url($lien_asv) . '" target="_blank">' : '';
@@ -220,6 +228,7 @@ if (!empty($img_pres['url'])) {
     <div class="item-text">Remplacement de poste ASV</div>
   </div>
 </div>
+
 
 <div class="button-container">
 <?php $services=get_field('tous_les_services');

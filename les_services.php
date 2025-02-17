@@ -19,11 +19,11 @@
         foreach ($blocs as $key => $bloc) {
             echo '<div class="bloc">';
             if ($key % 2 == 0) { // Texte avant image
+                echo "<img src='{$bloc['image']['url']}' alt='Image de présentation'>";
                 echo "<div class='bloc-texte'>{$bloc['text']}</div>";
-                echo "<img src='{$bloc['image']['url']}' alt='Image de présentation'>";
             } else { // Image avant texte
-                echo "<img src='{$bloc['image']['url']}' alt='Image de présentation'>";
                 echo "<p>{$bloc['text']}</p>";
+                echo "<img src='{$bloc['image']['url']}' alt='Image de présentation'>";
             }
             echo '</div>';
         }
@@ -31,9 +31,9 @@
     </div>
 </section>
 <section class="end">
-    <p class="end-text">
+    <div class="end-text">
     <?php echo get_field('text'); ?>
-    </p>
+    </div>
     <div class ="price-contact">
         <div class="price <?php echo esc_attr(get_field('price') ? 'has-price' : 'no-price'); ?>">
     <?php echo get_field('price'); ?>

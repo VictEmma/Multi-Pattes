@@ -108,7 +108,11 @@ body.page-template-les_services {
         color: black;
         text-shadow: 3px 3px 0 #FFED00;
     }
-    
+    .end .price-contact .price h6 { 
+        font-weight: bold;
+        color: black;
+        text-shadow: 1px 1px 0 #FFED00;
+    }
    /* 🚀 Responsive : passage en colonne sur mobile */
 @media (max-width: 768px) {
     h1 {
