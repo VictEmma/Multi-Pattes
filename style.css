@@ -115,34 +115,34 @@ h1 {
   top: 50%;
   transform: translateY(-50%);
   cursor: pointer;
-  background: rgba(255, 255, 255, 0.8);
-  padding: 10px;
-  border-radius: 50%;
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  /* Suppression du fond, du padding, et du border-radius */
+  background: transparent; /* Aucun fond */
+  box-shadow: none; /* Pas d'ombre */
   transition: background 0.2s;
   z-index: 10; /* Assure que les boutons sont bien cliquables */
 }
 
 .carousel-button-prev:hover, .carousel-button-next:hover {
-  background: rgba(255, 255, 255, 1);
+  background: rgba(255, 255, 255, 0.2); /* Fond léger au survol */
 }
 
 .carousel-button-prev {
-  left: -40px;
+  left: -40px; /* Positionne le bouton précédent */
   transform: translateY(-50%) scaleX(-1); /* Inverser horizontalement */
 }
 
 .carousel-button-next {
-  right: -40px;
+  right: -40px; /* Positionne le bouton suivant */
   transform: translateY(-50%); /* Pas d'inversion pour le bouton suivant */
 }
 
 .carousel-button-prev img,
 .carousel-button-next img {
   pointer-events: auto;
-  width: 40px;
-  height: 40px;
+  width: 43px;  /* Largeur fixée à 43 pixels */
+  height: 85px; /* Hauteur fixée à 85 pixels */
 }
+
 /* Boutons sur les petits écrans (max-width: 480px) */
 @media screen and (max-width: 480px) {
   .button {
