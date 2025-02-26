@@ -1,7 +1,6 @@
 .ticker-wrapper {
     overflow: hidden;
     background-color: #FFED00;
-    border: 1px solid #ddd;
     padding: 10px 0;
   }
   
@@ -29,6 +28,10 @@
     stroke-width: 1px; /* Épaisseur du contour */
     margin: 0 15px; /* Espacement autour du SVG */
     vertical-align: middle; /* Aligne le SVG avec le texte */
+    img {
+      width: 18px;
+      height: 18px;
+    }
   }
 .video-background {
     video {
@@ -68,6 +71,7 @@
   cursor: pointer;
   transition: background-color 0.3s ease, transform 0.3s ease;
   z-index: 3; /* Le bouton sera au-dessus de la vidéo */
+  text-decoration: none;
 }
 
 .circle-button:hover {
@@ -109,6 +113,11 @@
 .start .bienvenue .t-photo .bloc-text {
   p{
     margin-top: 30px;
+    line-height: 150%;
+    max-width: 562px;
+  }
+  h2{
+    max-width: 394px;
   }
 }
 
@@ -125,6 +134,7 @@
   gap: 100px;
   .button-container{
     text-align:center;
+    margin-top: 64px;
   }
     p {
       text-align: center;

@@ -33,31 +33,31 @@
         Votre navigateur ne supporte pas la lecture de cette vidéo.
     </video>
         <h1><?php echo get_field('text_video'); ?></h1>
-    <div class="circle-button">
-        <span class="button-text">Truffinoscope</span>
-    </div>
+    <a href="https://multi-pattes.fr/truffinoscope/" class="circle-button">
+    <span class="button-text">Truffinoscope</span>
+    </a>
 </div>
 <section class="start">
   <div class="bienvenue">
     <div class="t-photo">
-      <img src="http://projet-multipattes.test/wp-content/uploads/2025/01/Logo-Multi-pattes-2024-1.png" alt="Logo dessiné">
+    <?php 
+// Récupérer le champ ACF 'img_pres'
+$img_pres = get_field('logo_img');
+
+// Vérifier si le tableau contient une clé 'url'
+if (!empty($img_pres['url'])) {
+    // Afficher l'image avec l'URL récupérée
+    echo '<img src="' . esc_url($img_pres['url']) . '" alt="Logo">';
+} else {
+    // Message en cas d'absence d'URL
+    echo 'Aucune image de présentation disponible.';
+}
+?>
       <div class="bloc-text">
         <h2>
-            Bienvenue chez 
-            <br>
-            Multi Pattes !
+        <?php echo get_field('phrase_bienv'); ?>
         </h2>
-        <p>
-        Multi Pattes est une entreprise qui a pour but de rendre service aux
-        <br>
-        propriétaires de chiens à pathologies et surtout, à leurs amis à pattes.
-        <br>
-        Que ce soit pour de la garde, de la préparation physique, ou encore 
-        <br>
-        pour une formation sur les chiens catégorisés, vous êtes au bon 
-        <br>
-        endroit !
-        </p>
+        <?php echo get_field('text_bienv'); ?>
       </div>
     </div>
 <div class="youtube-video">

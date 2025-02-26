@@ -23,6 +23,14 @@
     font-weight: bold;
     text-align: center;
 }
+.menu-desktop li:hover {
+    transform: scale(1.2); /* Agrandit l'élément */
+    flex-grow: 2; /* Fait en sorte qu'il prenne plus de place */
+}
+
+.menu-desktop li:not(:hover) {
+    transform: scale(0.9); /* Rétrécit légèrement les autres */
+}
 
 /* --- Menu burger (mobile) --- */
 .menu-mobile {
