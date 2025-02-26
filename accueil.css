@@ -112,12 +112,13 @@
 
 .start .bienvenue .t-photo .bloc-text {
   p{
-    margin-top: 30px;
     line-height: 150%;
     max-width: 562px;
   }
   h2{
     max-width: 394px;
+    line-height: 120%;
+    margin-bottom: 30px;
   }
 }
 
