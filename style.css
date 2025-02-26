@@ -127,12 +127,12 @@ h1 {
 }
 
 .carousel-button-prev {
-  left: -40px; /* Positionne le bouton précédent */
+  left: -60px; /* Positionne le bouton précédent */
   transform: translateY(-50%) scaleX(-1); /* Inverser horizontalement */
 }
 
 .carousel-button-next {
-  right: -40px; /* Positionne le bouton suivant */
+  right: -60px; /* Positionne le bouton suivant */
   transform: translateY(-50%); /* Pas d'inversion pour le bouton suivant */
 }
 
