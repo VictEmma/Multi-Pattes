@@ -7,7 +7,9 @@ body.page-template-les_services {
         padding: 0;
     
 
-    
+    h1{
+        max-width: 740px;
+    }
     .intro {
         font-size: 24px;
         margin-bottom: 15px;
@@ -47,16 +49,15 @@ body.page-template-les_services {
         width: 100%;
         max-width: 1064px;
         justify-content: space-between;
+        
     }
-    
-    .bloc-texte {
-        flex: 1;
-        font-size: 18px;
-        text-align: justify;
+    .bloc text{
+        display: flex;
+        flex-direction: column;
     }
     
     .bloc img {
-        max-width: 300px;
+        width: auto;
         height: auto;
         border-radius: 10px;
         flex-shrink: 0; /* Empêche l’image de rétrécir */

@@ -22,18 +22,21 @@ h1 {
  text{
   line-height: 150%;
  }
+ strong{
+  font-weight: bold;
+ }
  p{
    font-size:16px;
  }
  .custom-title {
   font-family: "Montserrat", sans-serif;
   background-color: #FFED00;
-  font-size: 20px; /* Taille du texte */
+  font-size: 28px; /* Taille du texte */
   font-weight: bold;
   color: #000; /* Couleur du texte */
   margin: 0;
   text-align: center;
-  padding: 5px 100px;
+  padding: 12px 100px;
   margin-bottom: 20px;
   clip-path: polygon(10% 0%, 100% 0%, 90% 100%, 0% 100%);
   
@@ -103,10 +106,10 @@ h1 {
 }
 
 #carousel-image {
-  width: 600px !important; /* Largeur fixe */
-  height: auto !important; /* Hauteur fixe */
-  object-fit: cover !important; /* S'assure que l’image remplit le cadre sans être déformée */
-  border-radius: 10px;
+  width: 600px;/* Largeur fixe */
+  height: auto; /* Hauteur fixe */
+  object-fit: cover; /* S'assure que l’image remplit le cadre sans être déformée */
+  border-radius: 36px;
 }
 
 
@@ -158,19 +161,22 @@ h1 {
 @media (max-width: 768px) {
   h1 {
     font-size: 36px;
-    margin: 120px auto;
+    margin: 120px auto 25px;
     padding:20px;
   }
 
   h2 {
     font-size: 20px;
   }
-}
-@media (max-width: 768px) {
+  .custom-title{
+    font-size: 20px;
+    padding: 5px 61px;
+  }
+
   .carousel-container {
-    width: 390px; /* Largeur du carousel définie sur 390px pour les tablettes et petits écrans */
-    max-width: 390px; /* Limite la largeur pour s'assurer que le carousel ne dépasse pas 390px */
-    height: 300px; /* Ajuste la hauteur pour les écrans moyens */
+    width: auto; /* Largeur du carousel définie sur 390px pour les tablettes et petits écrans */
+    max-width: 300px; /* Limite la largeur pour s'assurer que le carousel ne dépasse pas 390px */
+    height: auto; /* Ajuste la hauteur pour les écrans moyens */
   }
 
   #carousel-image {
@@ -178,31 +184,16 @@ h1 {
     height: auto;
   }
 
-  .carousel-button-prev, .carousel-button-next {
-    padding: 8px; /* Réduit la taille des boutons sur les petits écrans */
+  .carousel-button-prev{
+    left :-40px;
+  }
+  .carousel-button-next {
+    right :-40px;
   }
 
   .carousel-button-prev img,
   .carousel-button-next img {
-    width: 30px; /* Réduit la taille des flèches */
-    height: 30px; /* Réduit la taille des flèches */
-  }
-}
-
-@media (max-width: 480px) {
-  .carousel-container {
-    width: 390px; /* Sur les petits écrans, le carousel a une largeur fixe de 390px */
-    max-width: 390px; /* Assure que la largeur ne dépasse pas 390px */
-    height: 200px; /* Ajuste la hauteur pour les petits écrans */
-  }
-
-  .carousel-button-prev, .carousel-button-next {
-    padding: 5px; /* Plus petits boutons sur les mobiles */
-  }
-
-  .carousel-button-prev img,
-  .carousel-button-next img {
-    width: 25px; /* Flèches encore plus petites */
-    height: 25px; /* Flèches encore plus petites */
+    width: 31px; /* Réduit la taille des flèches */
+    height: auto; /* Réduit la taille des flèches */
   }
 }

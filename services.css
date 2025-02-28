@@ -5,7 +5,7 @@ body.page-template-services {
     background-color: #fff;
     margin: 0;
     padding: 0;
-}
+
 
 /* ✅ Meilleure gestion du titre pour s'adapter aux écrans */
 h1 {
@@ -105,4 +105,5 @@ h1 {
     .img {
         max-width: 100%;
     }
+}
 }

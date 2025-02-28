@@ -4,16 +4,13 @@
 <h1>Truffinoscope</h1>
 
 <section class="about">
-    <div class="coucou">
-        <h2 class="custom-title">Qu'est-ce que c'est ?</h2>
-    </div>
-    <p><?php 
+    <h2 class="custom-title">Qu'est-ce que c'est ?</h2>
+    <?php 
     $introduction = get_field('introduction'); 
     if ($introduction) {
-        echo $introduction; // Affichage direct car c'est du contenu WYSIWYG
+        echo '<div class="intro">' . $introduction . '</div>'; // Affichage direct car c'est du contenu WYSIWYG
     }
 ?>
-    </p>
     <?php if (have_rows('pensionnaire')): ?>
     <div class="gallery">
         <?php while (have_rows('pensionnaire')): the_row(); 

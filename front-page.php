@@ -233,7 +233,7 @@ if (!empty($img_pres['url'])) {
 <div class="button-container">
 <?php $services=get_field('tous_les_services');
       ?>
-      <a class="button" href="<?php echo $services['url'] ?>" > <?php echo $services['title'] ?></a>
+      <a class="button" href="<?php echo $services['url'] ?>" >Tous les services</a>
 </div>
 
 </section>

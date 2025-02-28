@@ -106,6 +106,7 @@
     padding:0px;
     align-items: center;
     justify-content: center;
+    margin: 50px auto 100px auto;
   }
   
 }
@@ -167,12 +168,11 @@
   aspect-ratio: 16/9; /* Maintient un ratio vidéo classique */
 }
 .services {
-  margin-bottom: 100px;
+  margin: 100px 0;
 }
 .services .title{
   display:flex;
   justify-content: center;
-  padding:64px;
 }
 .services .button-container{
   text-align:center;
@@ -256,13 +256,12 @@
   align-items: center;
   gap:46px;
   flex-direction: column;
-  padding: 100px 0;
+  padding: 100px 0 130px 0;
   background-color: #FFFBE7;
 }
 .end .title{
   display:flex;
   justify-content: center;
-  padding:64px;
 }
 
   /* Animation pour le ticker */
@@ -346,6 +345,11 @@
   }
   .video-background{
     margin-top: 100px;
+  }
+  .video-background {
+    video {
+        width: 100.5%;
+    }
   }
   .video-background h1 {
     font-size: 40px; /* Réduire la taille du texte */

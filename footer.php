@@ -8,9 +8,9 @@
     <!-- Section Informations -->
     <div class="footer-info">
       <ul>
-        <li class="legal"><a href="https://multi-pattes.fr/mentions-legales/">Mentions légales</a></li>
-        <li class="reserver"><a href="https://multi-pattes.fr/comment-reserser/">Comment réserver ?</a></li>
-        <li class="services"><a href="https://multi-pattes.fr/services/">Mes services</a></li>
+        <li><a href="https://multi-pattes.fr/mentions-legales/">Mentions légales</a></li>
+        <li><a href="https://multi-pattes.fr/comment-reserser/">Comment réserver ?</a></li>
+        <li><a href="https://multi-pattes.fr/services/">Mes services</a></li>
       </ul>
     </div>
 
@@ -29,9 +29,9 @@
 
     <!-- Section Réseaux Sociaux -->
     <div class="footer-socials">
-      <a href="https://www.facebook.com/p/Multi-pattes-100085392571223/" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/img/Facebook-Logo.png" alt="Facebook"></a>
-      <a href="URL-TIKTOK" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/img/TikTok-Logo.png" alt="TikTok"></a>
-      <a href="https://www.instagram.com/multipattes38/" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/img/Instagram-Logo.png" alt="Instagram"></a>
+      <a href="https://www.facebook.com/p/Multi-pattes-100085392571223/" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/img/Facebook_Logo_1.svg" alt="Facebook"></a>
+      <a href="URL-TIKTOK" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/img/TikTok_Logo_1.svg" alt="TikTok"></a>
+      <a href="https://www.instagram.com/multipattes38/" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/img/Instagram_Logo_1.svg" alt="Instagram"></a>
     </div>
   </div>
 

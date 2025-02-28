@@ -17,13 +17,13 @@
     
     <div class="content-wrapper">
         <div class="info-section">
-            <div class="info-box">
                 <div class="title">
-                <h2 class="custom-title ">À savoir</h2>
+                    <h2 class="custom-title ">À savoir</h2>
                 </div>
                 <?php echo get_field('explain_text'); ?>
-                <a href="mailto:contact@multipattes.fr" class="button">Me contacter !</a>
-            </div>
+                <div class="the-button">
+                    <a href="mailto:contact@multipattes.fr" class="button">Me contacter !</a>
+                </div>
         </div>
     <div class="image-section">
     <?php 

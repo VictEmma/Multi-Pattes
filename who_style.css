@@ -96,43 +96,29 @@ strong {
    width: 521px;
 }
 
+.additional a{
+   margin-top: 70px;
+   margin-left: auto;
+   margin-right: auto;
+}
+
 @media (max-width: 1024px) {
    /* Section img-txt: Ajustement des espaces et alignement */
-   .img-txt {
-      flex-direction: column !important; /* Passe en colonne */
+   .img-txt, .additional {
       align-items: center !important; /* Centre les éléments */
       gap: 20px !important;
    }
 
-   .img-txt p {
+   .img-txt p, .additional p {
       max-width: 90% !important; /* Réduit la largeur du texte */
       margin: 0 auto !important; 
       font-size: 14px !important;
       text-align: left !important;
    }
 
-   .img-txt img {
-      max-width: 90% !important; /* Réduit la taille de l'image */
+   .img-txt img, .additional iframe {
+      max-width: 300px !important; /* Adapte la taille */
       height: auto !important; /* Maintient le ratio */
-   }
-
-   /* Ajustement de la section additional */
-   .additional {
-      flex-direction: column !important; /* Passe en colonne */
-      align-items: center !important; /* Centre les éléments */
-      gap: 20px !important; /* Ajoute de l'espace entre les éléments */
-      margin-top: 30px !important;
-   }
-
-   .additional p {
-      max-width: 90% !important; /* Réduit la largeur du texte */
-      margin: 0 auto !important; 
-      text-align: left !important;
-   }
-
-   .additional iframe {
-      width: 90% !important; /* Adapte la carte à l'écran */
-      height: auto !important; /* Ajuste automatiquement la hauteur */
    }
 
    /* Titre */
@@ -147,52 +133,39 @@ strong {
    /* Intro texte */
    .intro-text {
       font-size: 16px !important; /* Réduit la taille de la police */
-      margin-left: 20px !important; /* Réduit les marges sur mobile */
+      margin-left: 20px !important;
       margin-right: 20px !important;
    }
 
-   /* Section img-txt */
-   .img-txt p {
-      font-size: 14px !important; /* Réduit la taille du texte */
+   /* Section img-txt et additional */
+   .img-txt p, .additional p {
+      font-size: 14px !important;
       line-height: 1.6 !important;
       text-align: left !important;
    }
 
-   .img-txt img {
+   .img-txt img, .additional iframe {
       max-width: 100% !important; /* Prend toute la largeur */
    }
 
-   /* Additional Section */
    .additional iframe {
-      width: 100% !important; /* Prend toute la largeur */
-      height: 300px !important; /* Ajuste une hauteur fixe pour petits écrans */
-   }
-
-   .additional p {
-      font-size: 16px !important; 
-      text-align: left !important;
+      height: 300px !important; /* Hauteur ajustée */
    }
 }
 
 @media (max-width: 480px) {
-   /* Section img-txt */
-   .img-txt p {
-      font-size: 14px !important; /* Texte encore plus petit pour les écrans étroits */
+   /* Section img-txt et additional */
+   .img-txt p, .additional p {
+      font-size: 14px !important;
    }
 
-   .img-txt img {
-      width: 100% !important; /* Adapte parfaitement l'image à l'écran */
+   .img-txt img, .additional iframe {
+      width: 100% !important; /* Adapte parfaitement l'image/l'iframe */
       height: auto !important;
    }
 
-   /* Additional Section */
    .additional iframe {
-      height: 200px !important; /* Réduit encore la hauteur de l'iframe */
-   }
-
-   .additional p {
-      font-size: 14px !important; /* Réduit la taille du texte */
-      text-align: left !important; /* Centre le texte sur les très petits écrans */
+      height: 200px !important; /* Hauteur plus réduite pour petits écrans */
    }
 }
 }
