@@ -123,15 +123,18 @@ strong, span {
 /* Tablettes */
 @media (max-width: 1024px) {
     .content-wrapper {
-        flex-direction: column;
         align-items: center;
-        gap: clamp(20px, 4vw, 40px);
+        margin-top: 40px;
+        gap:40px;
     }
-
+    .the-button{
+      margin-top: 30px;
+    }
     .contact-info {
         justify-content: center;
         text-align: center;
         width: 100%;
+        gap: 20px;
     }
 
     .image-section {
@@ -163,7 +166,7 @@ strong, span {
 /* Mobile */
 @media (max-width: 768px) {
     .how_to {
-        padding: 25px 15px;  /* Ajustement des espacements */
+        padding: 22px 60px 60px;  /* Ajustement des espacements */
     }
 
     .contact-info {
@@ -173,6 +176,7 @@ strong, span {
     .phone-info {
         width: 100%;
         margin: 20px 0;
+        gap: 30px;
     }
 
     .info-box {

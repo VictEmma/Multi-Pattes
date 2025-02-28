@@ -115,10 +115,10 @@ body.page-template-les_services {
     }
    /* 🚀 Responsive : passage en colonne sur mobile */
 @media (max-width: 768px) {
-    h1 {
-        font-size: 50px;
+    .principal{
+        padding: 22px 60px 60px;
+        text-align: center;
     }
-
     .bloc {
         flex-direction: column;
         text-align: center;

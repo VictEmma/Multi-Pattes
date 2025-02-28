@@ -5,12 +5,7 @@ body.page-template-contact-me-try {
     background-color: #ffffff;
  
  h1 {
-    font-size: 85px;
-    text-align: center;
-    color: #000000;
-    margin: 120px auto;
-    padding: 0;
-    font-weight: 700;
+    max-width: 740px;
  }
 
  h2 {
@@ -211,8 +206,8 @@ body.page-template-contact-me-try {
 
 @media (max-width: 480px) {
     .about {
-        padding: 15px;
-        width: 100%;
+        padding: 22px 60px 60px;
+        
     }
 
     .img-txt .reseaux {

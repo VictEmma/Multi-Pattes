@@ -156,7 +156,7 @@
   align-items: center; /* Centre verticalement si nécessaire */
   width: 100%; /* Largeur de l'élément */
   height: auto; /* S'adapte à la taille de l'écran */
-  margin:50px 0px;
+  margin:42px 0px;
 }
 
 .start .youtube-video iframe {
@@ -284,12 +284,15 @@
   .circle-button{
     display: none;
   }
+  .services {
+    margin: 50px 0;
+  }
   /* Mobile adjustments */
   .services .grid-container {
     grid-template-columns: 1fr; /* 1 seule colonne */
     padding: 20px;
   }
-
+  
   .services .grid-container .item {
     height: 250px; /* Augmenter la taille des rectangles */
     margin-bottom: 20px; /* Espacement entre les éléments */
@@ -315,6 +318,7 @@
   .start .bienvenue .t-photo {
     flex-direction: column; /* Empiler les éléments en colonne */
     gap: 20px;
+    margin-bottom: 40px;
   }
   .start .bienvenue .t-photo img {
     width: 200px;
@@ -328,6 +332,13 @@
     flex-direction: column; /* Alignement vertical des éléments */
     gap: 20px;
   }
+  .start .who-is .title {
+    display: flex;
+    margin-bottom: 22px;
+  }
+  .start .who-is .button-container {
+        margin-top: 30px;
+    }
   .start .who-is .who-text p {
     max-width: 307px;
     text-align: center; /* Centre le texte à l'intérieur de l'élément */
@@ -373,7 +384,7 @@
   }
 
   .services .grid-container .item {
-    height: 200px; /* Ajuster la hauteur des éléments */
+    height: 123px; /* Ajuster la hauteur des éléments */
   }
 
   .services .grid-container .item-text {
