@@ -4,102 +4,63 @@
 </head>
     <h1>Mes services</h1>
     <section class="about">
-        <div class="contain">
-            <div class="first">
-                <div class="icon-and-text">
-                <img src="<?php echo get_template_directory_uri(); ?>/img/Patounne.svg" alt="Motif patte" class="icon" />
-                <h2>Garde chien pathologique</h2>
-                </div>
-                <h3><?php echo get_field('text_first'); ?></h3>
-                <?php 
-                $link = get_field('link_first'); 
-                if ($link): ?>
-                    <a class="button" href="<?php echo esc_url($link); ?>">En savoir +</a>
-                <?php endif; ?>
-            </div>
-            <?php 
-                $image = get_field('image_first'); 
-                if ($image): ?>
-                    <img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" class="img">
-                <?php endif; ?>
+        <?php 
+        $services = [
+            [
+                "title" => "Garde chien pathologique",
+                "text" => get_field('text_first'),
+                "link" => get_field('link_first'),
+                "image" => get_field('image_first')
+            ],
+            [
+                "title" => "Parc de jeux canin",
+                "text" => get_field('text_second'),
+                "link" => get_field('link_second'),
+                "image" => get_field('image_second')
+            ],
+            [
+                "title" => "Formatrice chien catégorisé",
+                "text" => get_field('text_third'),
+                "link" => get_field('link_third'),
+                "image" => get_field('image_third')
+            ],
+            [
+                "title" => "Préparation physique",
+                "text" => get_field('text_fourth'),
+                "link" => get_field('link_fourth'),
+                "image" => get_field('image_fourth')
+            ],
+            [
+                "title" => "Remplacement poste ASV",
+                "text" => get_field('text_five'),
+                "link" => get_field('link_five'),
+                "image" => get_field('image_five')
+            ]
+        ];
 
-        </div>
-        <div class="contain">
-        <?php 
-            $image = get_field('image_second'); 
-            if ($image): ?>
-                <img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" class="img">
-            <?php endif; ?>
-            <div class="first">
-                <div class="icon-and-text">
-                <img src="<?php echo get_template_directory_uri(); ?>/img/Patounne.svg" alt="Motif patte" class="icon" />
-                <h2>Parc de jeux canin</h2>
+        foreach ($services as $index => $service) : ?>
+            <div class="contain">
+                <?php if ($index % 2 !== 0 && $service['image']) : ?>
+                    <img src="<?php echo esc_url($service['image']['url']); ?>" alt="<?php echo esc_attr($service['image']['alt']); ?>" class="img">
+                <?php endif; ?>
+                
+                <div class="first">
+                    <div class="icon-and-text">
+                        <img src="<?php echo get_template_directory_uri(); ?>/img/Patounne.svg" alt="Motif patte" class="icon" />
+                        <h2><?php echo esc_html($service['title']); ?></h2>
+                    </div>
+                    <h3><?php echo wp_kses_post($service['text']); ?></h3>
+                    
+                    <?php 
+                    if (!empty($service['link']) && is_array($service['link']) && isset($service['link']['url'])) : ?>
+                        <a class="button" href="<?php echo esc_url($service['link']['url']); ?>">En savoir +</a>
+                    <?php endif; ?>
                 </div>
-                <h3><?php echo get_field('text_second'); ?></h3>
-                <?php 
-                $link = get_field('link_second'); 
-                if ($link): ?>
-                    <a class="button" href="<?php echo esc_url($link); ?>">En savoir +</a>
+
+                <?php if ($index % 2 === 0 && $service['image']) : ?>
+                    <img src="<?php echo esc_url($service['image']['url']); ?>" alt="<?php echo esc_attr($service['image']['alt']); ?>" class="img">
                 <?php endif; ?>
             </div>
-        </div>
-        <div class="contain">
-            <div class="first">
-                <div class="icon-and-text">
-                <img src="<?php echo get_template_directory_uri(); ?>/img/Patounne.svg" alt="Motif patte" class="icon" />
-                <h2>Formatrice chien catégorisé</h2>
-                </div>
-                <h3><?php echo get_field('text_third'); ?></h3>
-                <?php 
-                $link = get_field('link_third'); 
-                if ($link): ?>
-                    <a class="button" href="<?php echo esc_url($link); ?>">En savoir +</a>
-                <?php endif; ?>
-            </div>
-            <?php 
-            $image = get_field('image_third'); 
-            if ($image): ?>
-                <img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" class="img">
-            <?php endif; ?>
-        </div>
-        <div class="contain">
-        <?php 
-            $image = get_field('image_fourth'); 
-            if ($image): ?>
-                <img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" class="img">
-            <?php endif; ?>
-            <div class="first">
-                <div class="icon-and-text">
-                <img src="<?php echo get_template_directory_uri(); ?>/img/Patounne.svg" alt="Motif patte" class="icon" />
-                <h2>Préparation physique</h2>
-                </div>
-                <h3><?php echo get_field('text_fourth'); ?></h3>
-                <?php 
-                $link = get_field('link_fourth'); 
-                if ($link): ?>
-                    <a class="button" href="<?php echo esc_url($link); ?>">En savoir +</a>
-                <?php endif; ?>
-            </div>
-        </div>
-        <div class="contain">
-            <div class="first">
-                <div class="icon-and-text">
-                <img src="<?php echo get_template_directory_uri(); ?>/img/Patounne.svg" alt="Motif patte" class="icon" />
-                <h2>Remplacement poste ASV</h2>
-                </div>
-                <h3><?php echo get_field('text_five'); ?></h3>
-                <?php 
-                $link = get_field('link_five'); 
-                if ($link): ?>
-                    <a class="button" href="<?php echo esc_url($link); ?>">En savoir +</a>
-                <?php endif; ?>
-            </div>
-            <?php 
-            $image = get_field('image_five'); 
-            if ($image): ?>
-                <img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" class="img">
-            <?php endif; ?>
-        </div>
+        <?php endforeach; ?>
     </section>
-
 <?php get_footer(); ?>

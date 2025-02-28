@@ -37,7 +37,6 @@ h1 {
   margin: 0;
   text-align: center;
   padding: 12px 100px;
-  margin-bottom: 20px;
   clip-path: polygon(10% 0%, 100% 0%, 90% 100%, 0% 100%);
   
 }

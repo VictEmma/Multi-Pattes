@@ -50,7 +50,9 @@ body.page-template-truffinoscope {
         h1 {
             font-size: 36px;
         }
-    
+        .intro {
+            text-align: center;
+        }
         .gallery {
             display: grid;
             grid-template-columns: 1fr; /* Une seule colonne */

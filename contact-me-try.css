@@ -37,6 +37,9 @@ body.page-template-contact-me-try {
 /* En cas de petit écran, les éléments passent en colonne */
 
  }
+ .img-txt h2{
+    margin-bottom: 28px;
+ }
 
  /*.img-txt .title .reseaux {
     display: flex;
@@ -185,6 +188,7 @@ body.page-template-contact-me-try {
         }
     }
     .additional {
+        margin-top: 22px;
         flex-direction: column;
         align-items: center;
         gap: 40px;

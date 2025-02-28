@@ -192,7 +192,7 @@ strong, span {
 /* Très petits écrans */
 @media (max-width: 480px) {
     .how_to {
-        padding: 20px 10px;  /* Espacement encore plus compact */
+        padding: 22px 60px 60px;  /* Espacement encore plus compact */
     }
 
     .info-box h2 {
