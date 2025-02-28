@@ -39,11 +39,7 @@ strong {
    align-items: center; /* Aligne l'image et le texte verticalement */
    flex-wrap: wrap; /* En cas de petit écran, les éléments passent en colonne */
 }
-.img-txt a{
-   margin-top: 50px;
-   margin-left: auto;
-   margin-right: auto;
-}
+
 .img-txt p {
    font-size: 16px;
    line-height: 1.8;
@@ -58,7 +54,13 @@ strong {
    border-radius: 8px;
    margin-top: 20px; /* Décale l'image un peu vers le bas */
 }
-
+.img-txt .text-button{
+   display: flex;
+   flex-direction: column;
+   gap: 20px;
+   align-items: center;
+   justify-content: center;
+}
 .title {
    color: #000000;
    display: flex;
@@ -80,7 +82,13 @@ strong {
    margin-top: 10px;
    margin-bottom: 100px;
 }
-
+.additional .text-button{
+   display: flex;
+   flex-direction: column;
+   gap: 20px;
+   align-items: center;
+   justify-content: center;
+}
 .additional iframe {
    max-width: 100%;
    border-radius: 8px;
@@ -96,12 +104,6 @@ strong {
    width: 521px;
 }
 
-.additional a{
-   margin-top: 70px;
-   margin-left: auto;
-   margin-right: auto;
-}
-
 @media (max-width: 1024px) {
    /* Section img-txt: Ajustement des espaces et alignement */
    .img-txt, .additional {
@@ -114,6 +116,12 @@ strong {
       margin: 0 auto !important; 
       font-size: 14px !important;
       text-align: left !important;
+   }
+   .additional .text-button {
+      padding: 47px;
+   }
+   .img-txt .text-button {
+      padding: 47px;
    }
 
    .img-txt img, .additional iframe {
@@ -130,6 +138,13 @@ strong {
 }
 
 @media (max-width: 768px) {
+   .img-txt .text-button{
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      align-items: center;
+      justify-content: center;
+   }
    /* Intro texte */
    .intro-text {
       font-size: 16px !important; /* Réduit la taille de la police */
@@ -151,12 +166,17 @@ strong {
    .additional iframe {
       height: 300px !important; /* Hauteur ajustée */
    }
+   .img-txt p, .additional p {
+      font-size: 14px !important;
+      width: auto;
+   }
 }
 
 @media (max-width: 480px) {
    /* Section img-txt et additional */
    .img-txt p, .additional p {
       font-size: 14px !important;
+      width: auto;
    }
 
    .img-txt img, .additional iframe {

@@ -8,14 +8,6 @@ body.page-template-comment-reserver {
     padding: 0;
     overflow-x: hidden;
 
-h1 {
-    font-size: clamp(40px, 8vw, 85px);
-    text-align: center;
-    color: #000000;
-    margin: clamp(40px, 8vh, 120px) auto;
-    font-weight: 700;
-    padding: 0 20px;
-}
 
 strong, span {
     font-weight: 700;

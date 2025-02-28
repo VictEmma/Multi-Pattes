@@ -331,6 +331,7 @@
   .start .who-is {
     flex-direction: column; /* Alignement vertical des éléments */
     gap: 20px;
+    padding: 0px 0px 50px 0px;
   }
   .start .who-is .title {
     display: flex;

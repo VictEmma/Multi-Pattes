@@ -119,6 +119,17 @@ body.page-template-les_services {
         padding: 22px 60px 60px;
         text-align: center;
     }
+    .end{
+        padding: 22px 60px 60px;
+        text-align: center;
+    }
+    .intro {
+        text-align: center;
+    }
+    .end .price-contact .price p { 
+        font-size: 24px;
+        text-align: center;
+    }
     .bloc {
         flex-direction: column;
         text-align: center;
