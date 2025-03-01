@@ -164,7 +164,10 @@ strong, span {
     .contact-info {
         flex-direction: column;
     }
-
+    .info-section{
+        padding: 0px;
+        text-align: center;
+    }
     .phone-info {
         width: 100%;
         margin: 20px 0;
