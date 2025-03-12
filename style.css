@@ -2,9 +2,19 @@
  * Thème Name: Thème Multipattes Site
  * Version : 1.0.0
  */
- h1{
-   font-size:85px;
- }
+ body {
+  background: url('img/papier_paint.svg') repeat;
+  background-size: auto;
+}
+
+h1 {
+  font-size: 85px;
+  text-align: center;
+  color: #000000;
+  margin: 120px auto;
+  padding: 0;
+  font-weight: 700;
+}
  h2{
    font-size:48px;
    font-weight: 600;
@@ -12,9 +22,24 @@
  text{
   line-height: 150%;
  }
+ strong{
+  font-weight: bold;
+ }
  p{
    font-size:16px;
  }
+ .custom-title {
+  font-family: "Montserrat", sans-serif;
+  background-color: #FFED00;
+  font-size: 28px; /* Taille du texte */
+  font-weight: bold;
+  color: #000; /* Couleur du texte */
+  margin: 0;
+  text-align: center;
+  padding: 12px 100px;
+  clip-path: polygon(10% 0%, 100% 0%, 90% 100%, 0% 100%);
+  
+}
  .custom-button {
    display: inline-flex;
    align-items: center;
@@ -59,4 +84,115 @@
 }
 .button:hover {
   box-shadow: 6px 6px 0 0 #000;
+}
+.custom-carousel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  max-width: 600px; /* Adapte à la taille souhaitée */
+  margin: 0 auto;
+}
+.carousel-container {
+  width: 600px; /* Ajuste la largeur */
+  height: auto; /* Ajuste la hauteur */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  position: relative;
+  background-color: #FFFBE7;
+}
+
+#carousel-image {
+  width: 600px;/* Largeur fixe */
+  height: auto; /* Hauteur fixe */
+  object-fit: cover; /* S'assure que l’image remplit le cadre sans être déformée */
+  border-radius: 36px;
+}
+
+
+.carousel-button-prev, .carousel-button-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  /* Suppression du fond, du padding, et du border-radius */
+  background: transparent; /* Aucun fond */
+  box-shadow: none; /* Pas d'ombre */
+  transition: background 0.2s;
+  z-index: 10; /* Assure que les boutons sont bien cliquables */
+}
+
+.carousel-button-prev:hover, .carousel-button-next:hover {
+  background: rgba(255, 255, 255, 0.2); /* Fond léger au survol */
+}
+
+.carousel-button-prev {
+  left: -60px; /* Positionne le bouton précédent */
+  transform: translateY(-50%) scaleX(-1); /* Inverser horizontalement */
+}
+
+.carousel-button-next {
+  right: -60px; /* Positionne le bouton suivant */
+  transform: translateY(-50%); /* Pas d'inversion pour le bouton suivant */
+}
+
+.carousel-button-prev img,
+.carousel-button-next img {
+  pointer-events: auto;
+  width: 43px;  /* Largeur fixée à 43 pixels */
+  height: 85px; /* Hauteur fixée à 85 pixels */
+}
+
+/* Boutons sur les petits écrans (max-width: 480px) */
+@media screen and (max-width: 480px) {
+  .button {
+    font-size: 14px; /* Réduction de la taille du texte */
+    padding: 12px 18px;
+    padding-left: 50px;
+    background-position: 10px center;
+    background-size: 25px; /* Ajustement de l'icône */
+  }
+}
+
+/* Titres sur les tablettes (max-width: 768px) */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 36px;
+    margin: 120px auto 25px;
+    padding:20px;
+  }
+
+  h2 {
+    font-size: 20px;
+  }
+  .custom-title{
+    font-size: 20px;
+    padding: 5px 61px;
+  }
+
+  .carousel-container {
+    width: auto; /* Largeur du carousel définie sur 390px pour les tablettes et petits écrans */
+    max-width: 300px; /* Limite la largeur pour s'assurer que le carousel ne dépasse pas 390px */
+    height: auto; /* Ajuste la hauteur pour les écrans moyens */
+  }
+
+  #carousel-image {
+    width: 100%; /* L'image prend toute la largeur */
+    height: auto;
+  }
+
+  .carousel-button-prev{
+    left :-40px;
+  }
+  .carousel-button-next {
+    right :-40px;
+  }
+
+  .carousel-button-prev img,
+  .carousel-button-next img {
+    width: 31px; /* Réduit la taille des flèches */
+    height: auto; /* Réduit la taille des flèches */
+  }
 }

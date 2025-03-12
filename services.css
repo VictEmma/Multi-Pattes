@@ -5,70 +5,114 @@ body.page-template-services {
     background-color: #fff;
     margin: 0;
     padding: 0;
-    
-    h1 {
-        font-size: 85px;
-        text-align: center;
-        color: #000000;
-        margin: 120px auto 120px;
-        font-weight: 700;
-    }
-    
-    .about {
+
+
+a {
+    max-width: 190px;
+}
+/* ✅ Ajustement pour éviter des écarts trop grands sur petits écrans */
+.contain {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10vw; /* Au lieu de 216px */
+    margin: 0 auto;
+}
+
+/* ✅ Rend le padding plus flexible */
+.about {
+    display: flex;
+    flex-direction: column;
+    padding: 148px 189px; /* S'adapte à l'écran */
+    background-color: #FFFBE7;
+    gap: 75px;
+}
+
+/* ✅ Adapte le max-width pour éviter un texte trop large sur mobile */
+.first {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 60%; /* Évite un texte trop serré */
+    gap: 2rem;
+}
+
+/* ✅ Meilleure flexibilité */
+.first .icon-and-text {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.first h2 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    max-width: 90%; /* Permet au texte de mieux s'ajuster */
+    margin: 0;
+}
+
+.about h3 {
+    font-size: 1rem;
+    margin: 0;
+}
+
+/* ✅ Images responsives */
+.img {
+    width: 100%;
+    max-width: 434px;
+    height: auto;
+    border-radius: 8px;
+}
+
+/* 🎯 RESPONSIVE DESIGN */
+@media (max-width: 1024px) {
+    .contain {
         display: flex;
-        justify-content: space-between;
-        align-items: center;
-        background: #FFFBE7;
-        gap: 138px; /* Espace entre les colonnes */
-        flex-wrap: wrap;
-        padding-top: 100px;
-        padding-bottom: 100px; /* Passage en colonne sur petit écran */
+        flex-direction: column;
+        gap: 30px;
     }
+    
     
     .first {
-        display: flex;
-        flex-direction: column; /* Par défaut, colonne */
-        justify-content: center;
-        max-width: 50%; /* 50% pour le texte */
-        gap: 20px;
+        max-width: 80%;
+        text-align: center;
     }
 
     .first .icon-and-text {
+        justify-content: center;
+    }
+
+    .about {
+        padding: 5vh 5vw;
+    }
+}
+
+@media (max-width: 768px) {
+    a {
+        max-width: 149px;
+    }
+    h2 {
+        font-size:16px;
+    }
+    .about {
+        padding: 22px 60px 60px;
+        gap:40px;
+    }
+    .contain {
+        gap: 5vw;
+    }
+
+    .first {
+        max-width: 100%;
         display: flex;
-        align-items: center; /* Aligne verticalement */
-        gap: 17.44px; /* Espace entre l'icône et le texte */
+        flex-direction: column;
+        align-items: center; /* Centre tout ce qui est dedans */
+        text-align: center; /* Centre le texte */
     }
+    
 
-    .first h2 {
-        font-size: 24px;
-        font-weight: bold;
-        margin: 0;
-    }
-
-    .about h3 {
-        font-size: 20px;
-        margin: 0;
-    }
-    
-    .first .button {
-        background-color: #FFED00; /* Jaune bouton */
-        color: #000000;
-        display: inline-block;
-        text-align: center;
-        border-radius: 14px;
-        font-weight: bold;
-        margin-top: 20px;
-        cursor: pointer;
-        max-width: 30%;
-    }
-    
-    .first .button:hover {
-        background-color: #ffee00b3; /* Variation au survol */
-    }
-    
     .img {
-        max-width: 50%; /* L'image occupe 50% */
-        border-radius: 8px;
-        object-fit: cover; /* Maintient les proportions */
+        max-width: 100%;
     }
+}
 }

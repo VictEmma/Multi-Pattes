@@ -5,34 +5,21 @@ body.page-template-truffinoscope {
     background-color: #fff;
     margin: 0;
     padding: 0;
-}
-    
-    h1 {
-        font-size: 10vw;
-        text-align: center;
-        color: #000000;
-        margin: 120px auto 120px;
-        font-weight: 700;
-    }
+
+
 
     .about {
         display: flex;
         flex-direction: column;
         align-items: center;
         background: #FFFBE7;
-        padding: 100px 20px;
+        padding: 90px 79px 130px;
+        gap: 90px;
     }
 
-    .about .coucou {
-        font-weight: bold;
-        font-size: 34px;
-        margin-bottom: 90px;
-        text-align: center;
-    }
-
-    .about p {
-        text-align: center;
-        margin-bottom: 133px;
+    .intro {
+        max-width: 1064px;
+        text-align: left;
     }
 
     .gallery {
@@ -48,10 +35,10 @@ body.page-template-truffinoscope {
 
     .gallery-item img {
         width: 100%; /* Remplir la largeur */
+        height: 100%;
         max-height: 236px;
         max-width: 304px; /* Largeur maximale d'une image */
         height: auto; /* Ajuster la hauteur proportionnellement */
-        object-fit: cover;
     }
 
     .gallery-item h2 {
@@ -60,26 +47,29 @@ body.page-template-truffinoscope {
         margin-bottom: 0;
     }
 
-    @media only screen and (max-width: 500px){
-        h1{
-            font-size: 15vw;
+    @media only screen and (max-width: 500px) {
+        h1 {
+            font-size: 36px;
         }
-
+        .intro {
+            text-align: center;
+        }
         .gallery {
             display: grid;
-            grid-template-columns: repeat(2, 1fr); /* 4 colonnes */
-            gap: 100px 20px; /* 100px entre les lignes, 20px entre les colonnes */
+            grid-template-columns: 1fr; /* Une seule colonne */
+            gap: 20px; /* Espacement entre les éléments */
             width: 100%;
             max-width: 1200px; /* Largeur maximale */
         }
     }
-
-@media only screen and (max-width: 300px){
-    .gallery {
-        display: grid;
-        grid-template-columns: repeat(1, 1fr); /* 4 colonnes */
-        gap: 100px 20px; /* 100px entre les lignes, 20px entre les colonnes */
-        width: 100%;
-        max-width: 1200px; /* Largeur maximale */
+    
+    @media only screen and (max-width: 300px) {
+        .gallery {
+            display: grid;
+            grid-template-columns: 1fr; /* Toujours une seule colonne */
+            gap: 20px; /* Espacement entre les éléments */
+            width: 100%;
+            max-width: 1200px; /* Largeur maximale */
+        }
     }
-}
+}    

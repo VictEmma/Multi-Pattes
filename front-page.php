@@ -1,5 +1,7 @@
 <?php /* Template Name: acceuil */ ?>
 <?php get_header(); ?>
+<title>Accueil</title>
+</head>
     <div class="ticker-wrapper">
   <div class="ticker">
     <img src="<?php echo get_template_directory_uri(); ?>/img/Patounne.svg" alt="Motif patte" class="separator" />
@@ -31,28 +33,31 @@
         Votre navigateur ne supporte pas la lecture de cette vidéo.
     </video>
         <h1><?php echo get_field('text_video'); ?></h1>
+    <a href="https://multi-pattes.fr/truffinoscope/" class="circle-button">
+    <span class="button-text">Truffinoscope</span>
+    </a>
 </div>
 <section class="start">
   <div class="bienvenue">
     <div class="t-photo">
-      <img src="http://projet-multipattes.test/wp-content/uploads/2025/01/Logo-Multi-pattes-2024-1.png" alt="Logo dessiné">
+    <?php 
+// Récupérer le champ ACF 'img_pres'
+$img_pres = get_field('logo_img');
+
+// Vérifier si le tableau contient une clé 'url'
+if (!empty($img_pres['url'])) {
+    // Afficher l'image avec l'URL récupérée
+    echo '<img src="' . esc_url($img_pres['url']) . '" alt="Logo">';
+} else {
+    // Message en cas d'absence d'URL
+    echo 'Aucune image de présentation disponible.';
+}
+?>
       <div class="bloc-text">
         <h2>
-            Bienvenue chez 
-            <br>
-            Multi Pattes !
+        <?php echo get_field('phrase_bienv'); ?>
         </h2>
-        <p>
-        Multi Pattes est une entreprise qui a pour but de rendre service aux
-        <br>
-        propriétaires de chiens à pathologies et surtout, à leurs amis à pattes.
-        <br>
-        Que ce soit pour de la garde, de la préparation physique, ou encore 
-        <br>
-        pour une formation sur les chiens catégorisés, vous êtes au bon 
-        <br>
-        endroit !
-        </p>
+        <?php echo get_field('text_bienv'); ?>
       </div>
     </div>
 <div class="youtube-video">
@@ -117,118 +122,188 @@ if (!empty($img_pres['url'])) {
     <div class="who-text">
     
       <div class="title">
-        <h2>
+        <h2 class="custom-title">
           Qui suis-je ?
         </h2>
       </div>
       <p>
       <?php echo get_field('txt_pres'); ?>
       </p>
-      <?php $monlien=get_field('present_qui_suis-je')['lien_bouton'];
+      <?php $monlien=get_field('lien_bouton');
       ?>
+      <div class="button-container">
       <a class="button" href="<?php echo $monlien['url'] ?>" > <?php echo $monlien['title'] ?></a>
+      </div>
   </div>
 </section>
 <section class="services">
   <div class="title">
-    <h2>
+    <h2 class="custom-title">
       Services proposés
     </h2>
   </div>
-<div class="grid-container">
+  <div class="grid-container"> 
   <div class="item item1">
   <?php 
-// Récupérer le champ ACF 'img_pres'
-$img_guard = get_field('img_gard_patho');
+  $img_guard = get_field('img_gard_patho');
+  $lien_guard = get_field('lien_gard_patho');
+  $lien_guard = is_array($lien_guard) ? $lien_guard['url'] ?? '' : $lien_guard;
 
-// Vérifier si le tableau contient une clé 'url'
-if (!empty($img_guard['url'])) {
-    // Afficher l'image avec l'URL récupérée
-    echo '<img src="' . esc_url($img_guard['url']) . '" alt="Image Illustration">';
-} else {
-    // Message en cas d'absence d'URL
-    echo 'Aucune image de présentation disponible.';
-}
-?>
+  if (!empty($img_guard['url'])) {
+      echo !empty($lien_guard) ? '<a href="' . esc_url($lien_guard) . '" target="_blank">' : '';
+      echo '<img src="' . esc_url($img_guard['url']) . '" alt="Image Illustration">';
+      echo !empty($lien_guard) ? '</a>' : '';
+  } else {
+      echo 'Aucune image de présentation disponible.';
+  }
+  ?>
     <div class="item-text">Garde de chien pathologique</div>
   </div>
+
   <div class="item item2">
   <?php 
-// Récupérer le champ ACF 'img_pres'
-$img_park = get_field('img_park_canin');
+  $img_park = get_field('img_park_canin');
+  $lien_park = get_field('lien_park_canin');
+  $lien_park = is_array($lien_park) ? $lien_park['url'] ?? '' : $lien_park;
 
-// Vérifier si le tableau contient une clé 'url'
-if (!empty($img_park['url'])) {
-    // Afficher l'image avec l'URL récupérée
-    echo '<img src="' . esc_url($img_park['url']) . '" alt="Image Illustration">';
-} else {
-    // Message en cas d'absence d'URL
-    echo 'Aucune image de présentation disponible.';
-}
-?>
+  if (!empty($img_park['url'])) {
+      echo !empty($lien_park) ? '<a href="' . esc_url($lien_park) . '" target="_blank">' : '';
+      echo '<img src="' . esc_url($img_park['url']) . '" alt="Image Illustration">';
+      echo !empty($lien_park) ? '</a>' : '';
+  } else {
+      echo 'Aucune image de présentation disponible.';
+  }
+  ?>
     <div class="item-text">Parc de jeu canin</div>
   </div>
+
   <div class="item item3">
   <?php 
-// Récupérer le champ ACF 'img_pres'
-$img_dipl = get_field('img_diplom');
+  $img_dipl = get_field('img_diplom');
+  $lien_dipl = get_field('lien_diplom');
+  $lien_dipl = is_array($lien_dipl) ? $lien_dipl['url'] ?? '' : $lien_dipl;
 
-// Vérifier si le tableau contient une clé 'url'
-if (!empty($img_dipl['url'])) {
-    // Afficher l'image avec l'URL récupérée
-    echo '<img src="' . esc_url($img_dipl['url']) . '" alt="Image Illustration">';
-} else {
-    // Message en cas d'absence d'URL
-    echo 'Aucune image de présentation disponible.';
-}
-?>
+  if (!empty($img_dipl['url'])) {
+      echo !empty($lien_dipl) ? '<a href="' . esc_url($lien_dipl) . '" target="_blank">' : '';
+      echo '<img src="' . esc_url($img_dipl['url']) . '" alt="Image Illustration">';
+      echo !empty($lien_dipl) ? '</a>' : '';
+  } else {
+      echo 'Aucune image de présentation disponible.';
+  }
+  ?>
     <div class="item-text">Diplôme CESCCAM</div>
   </div>
+
   <div class="item item4">
   <?php 
-// Récupérer le champ ACF 'img_pres'
-$img_phy = get_field('img_pre_phy');
+  $img_phy = get_field('img_pre_phy');
+  $lien_phy = get_field('lien_pre_phy');
+  $lien_phy = is_array($lien_phy) ? $lien_phy['url'] ?? '' : $lien_phy;
 
-// Vérifier si le tableau contient une clé 'url'
-if (!empty($img_phy['url'])) {
-    // Afficher l'image avec l'URL récupérée
-    echo '<img src="' . esc_url($img_phy['url']) . '" alt="Image Illustration">';
-} else {
-    // Message en cas d'absence d'URL
-    echo 'Aucune image de présentation disponible.';
-}
-?>
+  if (!empty($img_phy['url'])) {
+      echo !empty($lien_phy) ? '<a href="' . esc_url($lien_phy) . '" target="_blank">' : '';
+      echo '<img src="' . esc_url($img_phy['url']) . '" alt="Image Illustration">';
+      echo !empty($lien_phy) ? '</a>' : '';
+  } else {
+      echo 'Aucune image de présentation disponible.';
+  }
+  ?>
     <div class="item-text">Préparation physique</div>
   </div>
+
   <div class="item item5">
   <?php 
-// Récupérer le champ ACF 'img_pres'
-$asv = get_field('img_asv');
+  $asv = get_field('img_asv');
+  $lien_asv = get_field('lien_asv');
+  $lien_asv = is_array($lien_asv) ? $lien_asv['url'] ?? '' : $lien_asv;
 
-// Vérifier si le tableau contient une clé 'url'
-if (!empty($asv['url'])) {
-    // Afficher l'image avec l'URL récupérée
-    echo '<img src="' . esc_url($asv['url']) . '" alt="Image Illustration">';
-} else {
-    // Message en cas d'absence d'URL
-    echo 'Aucune image de présentation disponible.';
-}
-?>
+  if (!empty($asv['url'])) {
+      echo !empty($lien_asv) ? '<a href="' . esc_url($lien_asv) . '" target="_blank">' : '';
+      echo '<img src="' . esc_url($asv['url']) . '" alt="Image Illustration">';
+      echo !empty($lien_asv) ? '</a>' : '';
+  } else {
+      echo 'Aucune image de présentation disponible.';
+  }
+  ?>
     <div class="item-text">Remplacement de poste ASV</div>
   </div>
 </div>
+
+
 <div class="button-container">
-<?php $services=get_field('services')['tous_les_services'];
+<?php $services=get_field('tous_les_services');
       ?>
-      <a class="button" href="<?php echo $monlien['url'] ?>" > <?php echo $monlien['title'] ?></a>
+      <a class="button" href="<?php echo $services['url'] ?>" >Tous les services</a>
 </div>
 
 </section>
 <section class="end">
-  <div class="title">
-    <h2>
-      Mes retours clients
-    </h2>
-  </div>
+    <div class="title">
+        <h2 class="custom-title">Mes retours clients</h2>
+    </div>
+        <?php if (have_rows('carrousel_images')): ?>
+            <div class="custom-carousel">
+                <div class="carousel-container">
+                    <?php 
+                    $images = []; 
+                    while (have_rows('carrousel_images')): the_row(); 
+                        $image = get_sub_field('image');
+                        if ($image): 
+                            $images[] = esc_url($image['url']);
+                        endif;
+                    endwhile;
+                    ?>
+
+                    <?php if (!empty($images)): ?>
+                        <img id="carousel-image" src="<?php echo $images[0]; ?>" alt="Carrousel">
+                    <?php endif; ?>
+                </div>
+
+                <!-- Boutons de navigation -->
+                <div class="carousel-button-prev">
+                    <img src="<?php echo get_template_directory_uri(); ?>/img/carrousel_button.svg" alt="Précédent">
+                </div>
+                <div class="carousel-button-next">
+                    <img src="<?php echo get_template_directory_uri(); ?>/img/carrousel_button.svg" alt="Suivant" class="reverse">
+                </div>
+            </div>
+
+            <!-- On passe les images en JSON pour le script -->
+            <script>
+                var carouselImages = <?php echo json_encode($images); ?>;
+            </script>
+        <?php endif; ?>
 </section>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    let currentIndex = 0;
+    const imgElement = document.getElementById("carousel-image");
+    const prevButton = document.querySelector(".carousel-button-prev");
+    const nextButton = document.querySelector(".carousel-button-next");
+
+    if (!carouselImages || carouselImages.length === 0) {
+        console.error("Aucune image trouvée pour le carrousel.");
+        return;
+    }
+
+    function updateImage(index) {
+        imgElement.style.opacity = 0;
+        setTimeout(() => {
+            imgElement.src = carouselImages[index];
+            imgElement.style.opacity = 1;
+        }, 300);
+    }
+
+    prevButton.addEventListener("click", function () {
+        currentIndex = (currentIndex - 1 + carouselImages.length) % carouselImages.length;
+        updateImage(currentIndex);
+    });
+
+    nextButton.addEventListener("click", function () {
+        currentIndex = (currentIndex + 1) % carouselImages.length;
+        updateImage(currentIndex);
+    });
+});
+</script>
+
 <?php get_footer(); ?>

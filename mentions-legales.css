@@ -40,11 +40,14 @@ body.page-template-mentions-legales {
 
  @media only screen and (max-width: 600px){
    h1{
-      font-size: 36px !important;
+      font-size: 36px;
+      margin: 120px auto 25px;
+      padding: 20px;
    }
 
    .about{
-      padding: 10px 10px !important;
+      padding: 36px 60px;
+      text-align: center;
    }
 
    .title {
