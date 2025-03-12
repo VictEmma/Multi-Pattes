@@ -51,6 +51,7 @@ body.page-template-truffinoscope {
         max-height: 236px;
         max-width: 304px; /* Largeur maximale d'une image */
         height: auto; /* Ajuster la hauteur proportionnellement */
+        object-fit: cover;
     }
 
     .gallery-item h2 {
